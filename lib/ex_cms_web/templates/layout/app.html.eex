@@ -7,15 +7,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello ExCms!</title>
+    <title>ExCms</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
+    <%= if(should_show_nav_bar?(@conn)) do %>
+        <p>This is a test</p>
+        <!-- TODO CREATE A NAVBAR Component and render that here -->
+    <% end %>
+
     <div class="container">
-      <%= if(get_flash(@conn, :infor)) do %>
+      <%= if(get_flash(@conn, :info)) do %>
         <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <%= end %>
+      <% end %>
       <%= if(get_flash(@conn, :error)) do %>
         <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <% end %>
@@ -23,8 +28,8 @@
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-
     </div> <!-- /container -->
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
