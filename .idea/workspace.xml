@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d0a492-490d-4b02-b2b0-a985337d4cc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ex_cms.iml" afterPath="$PROJECT_DIR$/ex_cms.iml" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/layout.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/layout.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/site.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/site.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
-      <change beforePath="$PROJECT_DIR$/mix.exs" afterPath="$PROJECT_DIR$/mix.exs" />
-      <change beforePath="$PROJECT_DIR$/mix.lock" afterPath="$PROJECT_DIR$/mix.lock" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/accounts/accounts.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/accounts/accounts.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex" />
+      <change beforePath="$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/ex_cms_web/controllers/page_controller_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms_web/controllers/page_controller_test.exs" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/ex_cms/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/" />
@@ -30,98 +27,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mix.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mix.exs">
+      <file leaf-file-name="admin.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="437">
+              <caret line="23" column="85" lean-forward="false" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sites.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/sites.ex">
+      <file leaf-file-name="sites_test.exs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="141" column="43" lean-forward="false" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
+            <state relative-caret-position="567">
+              <caret line="151" column="19" lean-forward="false" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request_account.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/request_account.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="85" lean-forward="false" selection-start-line="19" selection-start-column="85" selection-end-line="19" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts_test.exs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
               <folding>
-                <element signature="e#38#68#0" expanded="false" />
-                <element signature="e#27#6607#1" expanded="false" />
-                <element signature="e#206#306#0" expanded="false" />
-                <element signature="e#324#351#0" expanded="false" />
-                <element signature="e#360#566#0" expanded="false" />
-                <element signature="e#683#867#0" expanded="false" />
-                <element signature="e#900#970#0" expanded="false" />
-                <element signature="e#979#1179#0" expanded="false" />
-                <element signature="e#1221#1288#0" expanded="false" />
-                <element signature="e#1297#1455#0" expanded="false" />
-                <element signature="e#1490#1520#0" expanded="false" />
-                <element signature="e#1529#1683#0" expanded="false" />
-                <element signature="e#1794#1894#0" expanded="false" />
-                <element signature="e#1912#2027#0" expanded="false" />
-                <element signature="e#2036#2243#0" expanded="false" />
-                <element signature="e#2333#2517#0" expanded="false" />
-                <element signature="e#2550#2620#0" expanded="false" />
-                <element signature="e#2629#2829#0" expanded="false" />
-                <element signature="e#2871#2938#0" expanded="false" />
-                <element signature="e#2947#3105#0" expanded="false" />
-                <element signature="e#3140#3170#0" expanded="false" />
-                <element signature="e#3179#3334#0" expanded="false" />
-                <element signature="e#3369#3407#0" expanded="false" />
-                <element signature="e#3446#3549#0" expanded="false" />
-                <element signature="e#3568#3596#0" expanded="false" />
-                <element signature="e#3605#3816#0" expanded="false" />
-                <element signature="e#3872#4060#0" expanded="false" />
-                <element signature="e#4094#4166#0" expanded="false" />
-                <element signature="e#4175#4381#0" expanded="false" />
-                <element signature="e#4426#4495#0" expanded="false" />
-                <element signature="e#4504#4668#0" expanded="false" />
-                <element signature="e#4706#4737#0" expanded="false" />
-                <element signature="e#4746#4904#0" expanded="false" />
-                <element signature="e#4942#4982#0" expanded="false" />
-                <element signature="e#5022#5128#0" expanded="false" />
-                <element signature="e#5148#5177#0" expanded="false" />
-                <element signature="e#5186#5402#0" expanded="false" />
-                <element signature="e#5460#5652#0" expanded="false" />
-                <element signature="e#5687#5761#0" expanded="false" />
-                <element signature="e#5770#5982#0" expanded="false" />
-                <element signature="e#6030#6101#0" expanded="false" />
-                <element signature="e#6110#6280#0" expanded="false" />
-                <element signature="e#6321#6353#0" expanded="false" />
-                <element signature="e#6362#6524#0" expanded="false" />
-                <element signature="e#6565#6607#0" expanded="false" />
+                <element signature="e#34#5208#1" expanded="false" />
+                <element signature="e#556#684#0" expanded="false" />
+                <element signature="e#615#627#0" expanded="false" />
+                <element signature="e#730#862#0" expanded="false" />
+                <element signature="e#920#1057#0" expanded="false" />
+                <element signature="e#1117#1369#0" expanded="false" />
+                <element signature="e#1181#1193#0" expanded="false" />
+                <element signature="e#1439#1530#0" expanded="false" />
+                <element signature="e#1507#1521#0" expanded="false" />
+                <element signature="e#1592#1910#0" expanded="false" />
+                <element signature="e#1682#1695#0" expanded="false" />
+                <element signature="e#1980#2205#0" expanded="false" />
+                <element signature="e#2130#2144#0" expanded="false" />
+                <element signature="e#2251#2431#0" expanded="false" />
+                <element signature="e#2387#2419#1" expanded="false" />
+                <element signature="e#2485#2587#0" expanded="false" />
+                <element signature="e#2900#3058#0" expanded="false" />
+                <element signature="e#2969#2981#0" expanded="false" />
+                <element signature="e#3108#3227#0" expanded="false" />
+                <element signature="e#3305#3447#0" expanded="false" />
+                <element signature="e#3527#3750#0" expanded="false" />
+                <element signature="e#3620#3632#0" expanded="false" />
+                <element signature="e#3830#3931#0" expanded="false" />
+                <element signature="e#3908#3922#0" expanded="false" />
+                <element signature="e#4013#4341#0" expanded="false" />
+                <element signature="e#4153#4166#0" expanded="false" />
+                <element signature="e#4421#4671#0" expanded="false" />
+                <element signature="e#4566#4580#0" expanded="false" />
+                <element signature="e#4737#4986#0" expanded="false" />
+                <element signature="e#4922#4974#1" expanded="false" />
+                <element signature="e#5060#5202#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build_page.ex" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex">
+      <file leaf-file-name="accounts.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/accounts.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="site.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/site.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/page.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="231">
+              <caret line="115" column="12" lean-forward="false" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
+              <folding>
+                <element signature="e#41#74#0" expanded="false" />
+                <element signature="e#166#269#0" expanded="false" />
+                <element signature="e#288#316#0" expanded="false" />
+                <element signature="e#325#536#0" expanded="false" />
+                <element signature="e#592#780#0" expanded="false" />
+                <element signature="e#814#886#0" expanded="false" />
+                <element signature="e#895#1101#0" expanded="false" />
+                <element signature="e#1146#1215#0" expanded="false" />
+                <element signature="e#1224#1388#0" expanded="false" />
+                <element signature="e#1426#1457#0" expanded="false" />
+                <element signature="e#1466#1624#0" expanded="false" />
+                <element signature="e#1662#1702#0" expanded="false" />
+                <element signature="e#1750#1866#0" expanded="false" />
+                <element signature="e#1887#1924#0" expanded="false" />
+                <element signature="e#1933#2193#0" expanded="false" />
+                <element signature="e#2268#2495#0" expanded="false" />
+                <element signature="e#2539#2629#0" expanded="false" />
+                <element signature="e#2638#2903#0" expanded="false" />
+                <element signature="e#2977#3065#0" expanded="false" />
+                <element signature="e#3074#3296#0" expanded="false" />
+                <element signature="e#3363#3404#0" expanded="false" />
+                <element signature="e#3413#3610#0" expanded="false" />
+                <element signature="e#3677#3736#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,7 +156,6 @@
         <option value="$PROJECT_DIR$/lib/ex_cms_web/views/layout_view.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex" />
         <option value="$PROJECT_DIR$/priv/repo/migrations/20180411065911_create_admins.exs" />
-        <option value="$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/accounts/auth.ex" />
         <option value="$PROJECT_DIR$/priv/repo/migrations/20180411072706_create_assets.exs" />
         <option value="$PROJECT_DIR$/priv/repo/migrations/20180411072826_create_layouts.exs" />
@@ -162,10 +168,15 @@
         <option value="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
         <option value="$PROJECT_DIR$/mix.exs" />
         <option value="$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms/accounts/request_account.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex" />
+        <option value="$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs" />
+        <option value="$PROJECT_DIR$/test/ex_cms_web/controllers/page_controller_test.exs" />
+        <option value="$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="736" />
@@ -215,20 +226,13 @@
             <path>
               <item name="excms" type="b2602c69:ProjectViewProjectNode" />
               <item name="excms" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="excms" type="b2602c69:ProjectViewProjectNode" />
               <item name="excms" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="ex_cms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excms" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="ex_cms" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -243,7 +247,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="SearchEverywhereHistoryKey" value="mix&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/mix.exs&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;la&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/layout.ex&#10;site.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/site.ex&#10;mix.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/mix.exs&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex" />
+    <property name="SearchEverywhereHistoryKey" value="admin&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/accounts/admin.ex&#10;mix&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/mix.exs&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;la&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/layout.ex&#10;site.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/site.ex&#10;mix.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/mix.exs&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -319,14 +323,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="736" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -337,7 +341,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -349,20 +352,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/page/index.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20180411072706_create_assets.exs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -417,20 +406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -548,24 +523,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/auth.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/accounts.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -652,10 +613,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mix.exs">
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        <state relative-caret-position="189">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/site.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/page.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -714,27 +691,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/page.ex">
+    <entry file="file://$PROJECT_DIR$/mix.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="126">
+          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/site.ex">
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/accounts.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="231">
+          <caret line="115" column="12" lean-forward="false" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
+          <folding>
+            <element signature="e#41#74#0" expanded="false" />
+            <element signature="e#166#269#0" expanded="false" />
+            <element signature="e#288#316#0" expanded="false" />
+            <element signature="e#325#536#0" expanded="false" />
+            <element signature="e#592#780#0" expanded="false" />
+            <element signature="e#814#886#0" expanded="false" />
+            <element signature="e#895#1101#0" expanded="false" />
+            <element signature="e#1146#1215#0" expanded="false" />
+            <element signature="e#1224#1388#0" expanded="false" />
+            <element signature="e#1426#1457#0" expanded="false" />
+            <element signature="e#1466#1624#0" expanded="false" />
+            <element signature="e#1662#1702#0" expanded="false" />
+            <element signature="e#1750#1866#0" expanded="false" />
+            <element signature="e#1887#1924#0" expanded="false" />
+            <element signature="e#1933#2193#0" expanded="false" />
+            <element signature="e#2268#2495#0" expanded="false" />
+            <element signature="e#2539#2629#0" expanded="false" />
+            <element signature="e#2638#2903#0" expanded="false" />
+            <element signature="e#2977#3065#0" expanded="false" />
+            <element signature="e#3074#3296#0" expanded="false" />
+            <element signature="e#3363#3404#0" expanded="false" />
+            <element signature="e#3413#3610#0" expanded="false" />
+            <element signature="e#3677#3736#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="85" lean-forward="false" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex">
+    <entry file="file://$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="567">
+          <caret line="151" column="19" lean-forward="false" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ex_cms_web/controllers/page_controller_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/request_account.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="85" lean-forward="false" selection-start-line="19" selection-start-column="85" selection-end-line="19" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+          <folding>
+            <element signature="e#34#5208#1" expanded="false" />
+            <element signature="e#556#684#0" expanded="false" />
+            <element signature="e#615#627#0" expanded="false" />
+            <element signature="e#730#862#0" expanded="false" />
+            <element signature="e#920#1057#0" expanded="false" />
+            <element signature="e#1117#1369#0" expanded="false" />
+            <element signature="e#1181#1193#0" expanded="false" />
+            <element signature="e#1439#1530#0" expanded="false" />
+            <element signature="e#1507#1521#0" expanded="false" />
+            <element signature="e#1592#1910#0" expanded="false" />
+            <element signature="e#1682#1695#0" expanded="false" />
+            <element signature="e#1980#2205#0" expanded="false" />
+            <element signature="e#2130#2144#0" expanded="false" />
+            <element signature="e#2251#2431#0" expanded="false" />
+            <element signature="e#2387#2419#1" expanded="false" />
+            <element signature="e#2485#2587#0" expanded="false" />
+            <element signature="e#2900#3058#0" expanded="false" />
+            <element signature="e#2969#2981#0" expanded="false" />
+            <element signature="e#3108#3227#0" expanded="false" />
+            <element signature="e#3305#3447#0" expanded="false" />
+            <element signature="e#3527#3750#0" expanded="false" />
+            <element signature="e#3620#3632#0" expanded="false" />
+            <element signature="e#3830#3931#0" expanded="false" />
+            <element signature="e#3908#3922#0" expanded="false" />
+            <element signature="e#4013#4341#0" expanded="false" />
+            <element signature="e#4153#4166#0" expanded="false" />
+            <element signature="e#4421#4671#0" expanded="false" />
+            <element signature="e#4566#4580#0" expanded="false" />
+            <element signature="e#4737#4986#0" expanded="false" />
+            <element signature="e#4922#4974#1" expanded="false" />
+            <element signature="e#5060#5202#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

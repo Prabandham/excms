@@ -101,4 +101,100 @@ defmodule ExCms.Accounts do
   def change_admin(%Admin{} = admin) do
     Admin.changeset(admin, %{})
   end
+
+  alias ExCms.Accounts.RequestAccount
+
+  @doc """
+  Returns the list of requests.
+
+  ## Examples
+
+      iex> list_requests()
+      [%RequestAccount{}, ...]
+
+  """
+  def list_requests do
+    Repo.all(RequestAccount)
+  end
+
+  @doc """
+  Gets a single request_account.
+
+  Raises `Ecto.NoResultsError` if the Request account does not exist.
+
+  ## Examples
+
+      iex> get_request_account!(123)
+      %RequestAccount{}
+
+      iex> get_request_account!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_request_account!(id), do: Repo.get!(RequestAccount, id)
+
+  @doc """
+  Creates a request_account.
+
+  ## Examples
+
+      iex> create_request_account(%{field: value})
+      {:ok, %RequestAccount{}}
+
+      iex> create_request_account(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_request_account(attrs \\ %{}) do
+    %RequestAccount{}
+    |> RequestAccount.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a request_account.
+
+  ## Examples
+
+      iex> update_request_account(request_account, %{field: new_value})
+      {:ok, %RequestAccount{}}
+
+      iex> update_request_account(request_account, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_request_account(%RequestAccount{} = request_account, attrs) do
+    request_account
+    |> RequestAccount.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a RequestAccount.
+
+  ## Examples
+
+      iex> delete_request_account(request_account)
+      {:ok, %RequestAccount{}}
+
+      iex> delete_request_account(request_account)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_request_account(%RequestAccount{} = request_account) do
+    Repo.delete(request_account)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking request_account changes.
+
+  ## Examples
+
+      iex> change_request_account(request_account)
+      %Ecto.Changeset{source: %RequestAccount{}}
+
+  """
+  def change_request_account(%RequestAccount{} = request_account) do
+    RequestAccount.changeset(request_account, %{})
+  end
 end

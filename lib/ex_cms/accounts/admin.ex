@@ -10,6 +10,7 @@ defmodule ExCms.Accounts.Admin do
     field :email, :string
     field :full_name, :string
     field :is_active, :boolean, default: false
+    field :password, :string, virtual: true
     field :password_hash, :string
 
     timestamps()
@@ -18,8 +19,9 @@ defmodule ExCms.Accounts.Admin do
   @doc false
   def changeset(admin, attrs) do
     admin
-    |> cast(attrs, [:email, :password_hash, :full_name, :is_active, :attributes])
-    |> validate_required([:email, :password_hash, :full_name, :is_active, :attributes])
+    |> cast(attrs, [:email, :password, :full_name, :is_active, :attributes])
+    |> validate_required([:email, :password, :full_name, :is_active, :attributes])
+    |> validate_format(:email, ~r/^[A-Za-z0-9._%+-+']+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
     |> unique_constraint(:email)
   end
 end

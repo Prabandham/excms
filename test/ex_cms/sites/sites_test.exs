@@ -74,7 +74,7 @@ defmodule ExCms.SitesTest do
   end
 
   describe "pages" do
-    alias ExCms.Sites.Pages
+    alias ExCms.Sites.Page
 
     @valid_attrs %{content: "some content", description: "some description", is_active: true, name: "some name", title: "some title"}
     @update_attrs %{content: "some updated content", description: "some updated description", is_active: false, name: "some updated name", title: "some updated title"}
@@ -100,7 +100,7 @@ defmodule ExCms.SitesTest do
     end
 
     test "create_pages/1 with valid data creates a pages" do
-      assert {:ok, %Pages{} = pages} = Sites.create_pages(@valid_attrs)
+      assert {:ok, %Page{} = pages} = Sites.create_pages(@valid_attrs)
       assert pages.content == "some content"
       assert pages.description == "some description"
       assert pages.is_active == true
@@ -115,7 +115,7 @@ defmodule ExCms.SitesTest do
     test "update_pages/2 with valid data updates the pages" do
       pages = pages_fixture()
       assert {:ok, pages} = Sites.update_pages(pages, @update_attrs)
-      assert %Pages{} = pages
+      assert %Page{} = pages
       assert pages.content == "some updated content"
       assert pages.description == "some updated description"
       assert pages.is_active == false
@@ -131,7 +131,7 @@ defmodule ExCms.SitesTest do
 
     test "delete_pages/1 deletes the pages" do
       pages = pages_fixture()
-      assert {:ok, %Pages{}} = Sites.delete_pages(pages)
+      assert {:ok, %Page{}} = Sites.delete_pages(pages)
       assert_raise Ecto.NoResultsError, fn -> Sites.get_pages!(pages.id) end
     end
 
