@@ -119,7 +119,10 @@ defmodule ExCms.Sites do
 
   """
   def list_pages do
-    Repo.all(Page)
+    Page
+    |> Ecto.Query.where(is_active: ^true)
+    |> Repo.all()
+    |> Repo.preload([:site, :layout])
   end
 
   @doc """
@@ -136,7 +139,7 @@ defmodule ExCms.Sites do
       ** (Ecto.NoResultsError)
 
   """
-  def get_page!(id), do: Repo.get!(Page, id)
+  def get_page!(id), do: Page |> Repo.get!(id) |> Repo.preload([:site, :layout])
 
   @doc """
   Creates a page.

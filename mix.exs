@@ -20,7 +20,7 @@ defmodule ExCms.Mixfile do
   def application do
     [
       mod: {ExCms.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :liquid]
     ]
   end
 
@@ -41,7 +41,8 @@ defmodule ExCms.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:earmark, "~> 1.2"}
+      {:earmark, "~> 1.2"},
+      {:liquid, "~> 0.8.0"}
     ]
   end
 

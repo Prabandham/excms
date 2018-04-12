@@ -15,9 +15,9 @@ defmodule ExCms.Sites.Site do
     field :meta, :map, default: %{}
     field :name, :string
 
-    has_many :pages, Page
-    has_many :assets, Asset
     has_many :layouts, Layout
+    has_many :assets, Asset
+    has_many :pages, Page
 
     timestamps()
   end

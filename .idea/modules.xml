@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ex_cms.iml" filepath="$PROJECT_DIR$/ex_cms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/deps/phoenix/phoenix.iml" filepath="$PROJECT_DIR$/deps/phoenix/phoenix.iml" />
-      <module fileurl="file://$PROJECT_DIR$/deps/phoenix_html/phoenix_html.iml" filepath="$PROJECT_DIR$/deps/phoenix_html/phoenix_html.iml" />
     </modules>
   </component>
 </project>

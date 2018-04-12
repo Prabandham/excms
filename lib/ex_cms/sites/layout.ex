@@ -21,6 +21,6 @@ defmodule ExCms.Sites.Layout do
     layout
     |> cast(attrs, [:name, :content, :site_id])
     |> validate_required([:name, :content, :site_id])
-    |> unique_constraint(:name, :name_for_site_layouts)
+    |> unique_constraint(:name, name: :name_for_site_layouts)
   end
 end
