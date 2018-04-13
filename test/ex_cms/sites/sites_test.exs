@@ -1,22 +1,13 @@
 defmodule ExCms.SitesTest do
   use ExCms.DataCase
-
+  alias ExCms.Factories
   alias ExCms.Sites
 
   describe "sites" do
     alias ExCms.Sites.Site
 
-    @valid_attrs %{description: "some description", domain_name: "some domain_name", google_analytics_key: "some google_analytics_key", is_active: true, meta: %{}, name: "some name"}
-    @update_attrs %{description: "some updated description", domain_name: "some updated domain_name", google_analytics_key: "some updated google_analytics_key", is_active: false, meta: %{}, name: "some updated name"}
-    @invalid_attrs %{description: nil, domain_name: nil, google_analytics_key: nil, is_active: nil, meta: nil, name: nil}
-
-    def site_fixture(attrs \\ %{}) do
-      {:ok, site} =
-        attrs
-        |> Enum.into(@valid_attrs)
-        |> Sites.create_site()
-
-      site
+    def site_fixture() do
+      Factories.fabricate_site()
     end
 
     test "list_sites/0 returns all sites" do
@@ -30,7 +21,7 @@ defmodule ExCms.SitesTest do
     end
 
     test "create_site/1 with valid data creates a site" do
-      assert {:ok, %Site{} = site} = Sites.create_site(@valid_attrs)
+      assert {:ok, %Site{} = site} = Sites.create_site(Factories.valid_site_attrs())
       assert site.description == "some description"
       assert site.domain_name == "some domain_name"
       assert site.google_analytics_key == "some google_analytics_key"
@@ -40,12 +31,12 @@ defmodule ExCms.SitesTest do
     end
 
     test "create_site/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Sites.create_site(@invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.create_site(Factories.invalid_site_attrs())
     end
 
     test "update_site/2 with valid data updates the site" do
       site = site_fixture()
-      assert {:ok, site} = Sites.update_site(site, @update_attrs)
+      assert {:ok, site} = Sites.update_site(site, Factories.update_site_attrs())
       assert %Site{} = site
       assert site.description == "some updated description"
       assert site.domain_name == "some updated domain_name"
@@ -57,7 +48,7 @@ defmodule ExCms.SitesTest do
 
     test "update_site/2 with invalid data returns error changeset" do
       site = site_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_site(site, @invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.update_site(site, Factories.invalid_site_attrs())
       assert site == Sites.get_site!(site.id)
     end
 
@@ -76,17 +67,8 @@ defmodule ExCms.SitesTest do
   describe "pages" do
     alias ExCms.Sites.Page
 
-    @valid_attrs %{content: "some content", description: "some description", is_active: true, name: "some name", title: "some title"}
-    @update_attrs %{content: "some updated content", description: "some updated description", is_active: false, name: "some updated name", title: "some updated title"}
-    @invalid_attrs %{content: nil, description: nil, is_active: nil, name: nil, title: nil}
-
-    def pages_fixture(attrs \\ %{}) do
-      {:ok, pages} =
-        attrs
-        |> Enum.into(@valid_attrs)
-        |> Sites.create_pages()
-
-      pages
+    def pages_fixture() do
+      Factories.fabricate_page()
     end
 
     test "list_pages/0 returns all pages" do
@@ -96,11 +78,14 @@ defmodule ExCms.SitesTest do
 
     test "get_pages!/1 returns the pages with given id" do
       pages = pages_fixture()
-      assert Sites.get_pages!(pages.id) == pages
+      assert Sites.get_page!(pages.id) == pages
     end
 
     test "create_pages/1 with valid data creates a pages" do
-      assert {:ok, %Page{} = pages} = Sites.create_pages(@valid_attrs)
+      layout = Factories.fabricate_layout()
+      site = Sites.get_site!(layout.site_id)
+      valid_page_attrs = Enum.into(Factories.valid_page_attrs(), %{site_id: site.id, layout_id: layout.id})
+      assert {:ok, %Page{} = pages} = Sites.create_page(valid_page_attrs)
       assert pages.content == "some content"
       assert pages.description == "some description"
       assert pages.is_active == true
@@ -109,12 +94,12 @@ defmodule ExCms.SitesTest do
     end
 
     test "create_pages/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Sites.create_pages(@invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.create_page(Factories.invalid_page_attrs())
     end
 
     test "update_pages/2 with valid data updates the pages" do
       pages = pages_fixture()
-      assert {:ok, pages} = Sites.update_pages(pages, @update_attrs)
+      assert {:ok, pages} = Sites.update_page(pages, Factories.update_page_attrs())
       assert %Page{} = pages
       assert pages.content == "some updated content"
       assert pages.description == "some updated description"
@@ -125,36 +110,27 @@ defmodule ExCms.SitesTest do
 
     test "update_pages/2 with invalid data returns error changeset" do
       pages = pages_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_pages(pages, @invalid_attrs)
-      assert pages == Sites.get_pages!(pages.id)
+      assert {:error, %Ecto.Changeset{}} = Sites.update_page(pages, Factories.invalid_page_attrs())
+      assert pages == Sites.get_page!(pages.id)
     end
 
     test "delete_pages/1 deletes the pages" do
       pages = pages_fixture()
-      assert {:ok, %Page{}} = Sites.delete_pages(pages)
-      assert_raise Ecto.NoResultsError, fn -> Sites.get_pages!(pages.id) end
+      assert {:ok, %Page{}} = Sites.delete_page(pages)
+      assert_raise Ecto.NoResultsError, fn -> Sites.get_page!(pages.id) end
     end
 
     test "change_pages/1 returns a pages changeset" do
       pages = pages_fixture()
-      assert %Ecto.Changeset{} = Sites.change_pages(pages)
+      assert %Ecto.Changeset{} = Sites.change_page(pages)
     end
   end
 
   describe "assets" do
     alias ExCms.Sites.Asset
 
-    @valid_attrs %{content: "some content", name: "some name"}
-    @update_attrs %{content: "some updated content", name: "some updated name"}
-    @invalid_attrs %{content: nil, name: nil}
-
-    def asset_fixture(attrs \\ %{}) do
-      {:ok, asset} =
-        attrs
-        |> Enum.into(@valid_attrs)
-        |> Sites.create_asset()
-
-      asset
+    def asset_fixture() do
+      Factories.fabricate_asset()
     end
 
     test "list_assets/0 returns all assets" do
@@ -168,18 +144,20 @@ defmodule ExCms.SitesTest do
     end
 
     test "create_asset/1 with valid data creates a asset" do
-      assert {:ok, %Asset{} = asset} = Sites.create_asset(@valid_attrs)
+      site = Factories.fabricate_site()
+      valid_asset_attrs = Enum.into(Factories.valid_asset_attrs(), %{site_id: site.id})
+      assert {:ok, %Asset{} = asset} = Sites.create_asset(valid_asset_attrs)
       assert asset.content == "some content"
       assert asset.name == "some name"
     end
 
     test "create_asset/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Sites.create_asset(@invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.create_asset(Factories.invalid_asset_attrs())
     end
 
     test "update_asset/2 with valid data updates the asset" do
       asset = asset_fixture()
-      assert {:ok, asset} = Sites.update_asset(asset, @update_attrs)
+      assert {:ok, asset} = Sites.update_asset(asset, Factories.update_asset_attrs())
       assert %Asset{} = asset
       assert asset.content == "some updated content"
       assert asset.name == "some updated name"
@@ -187,7 +165,7 @@ defmodule ExCms.SitesTest do
 
     test "update_asset/2 with invalid data returns error changeset" do
       asset = asset_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_asset(asset, @invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.update_asset(asset, Factories.invalid_asset_attrs())
       assert asset == Sites.get_asset!(asset.id)
     end
 
@@ -206,17 +184,8 @@ defmodule ExCms.SitesTest do
   describe "layouts" do
     alias ExCms.Sites.Layout
 
-    @valid_attrs %{content: "some content", name: "some name"}
-    @update_attrs %{content: "some updated content", name: "some updated name"}
-    @invalid_attrs %{content: nil, name: nil}
-
-    def layout_fixture(attrs \\ %{}) do
-      {:ok, layout} =
-        attrs
-        |> Enum.into(@valid_attrs)
-        |> Sites.create_layout()
-
-      layout
+    def layout_fixture() do
+      Factories.fabricate_layout()
     end
 
     test "list_layouts/0 returns all layouts" do
@@ -230,18 +199,20 @@ defmodule ExCms.SitesTest do
     end
 
     test "create_layout/1 with valid data creates a layout" do
-      assert {:ok, %Layout{} = layout} = Sites.create_layout(@valid_attrs)
+      site = Factories.fabricate_site()
+      valid_layout_attrs = Enum.into(Factories.valid_layout_attrs(), %{site_id: site.id})
+      assert {:ok, %Layout{} = layout} = Sites.create_layout(valid_layout_attrs)
       assert layout.content == "some content"
       assert layout.name == "some name"
     end
 
     test "create_layout/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Sites.create_layout(@invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.create_layout(Factories.invalid_layout_attrs())
     end
 
     test "update_layout/2 with valid data updates the layout" do
       layout = layout_fixture()
-      assert {:ok, layout} = Sites.update_layout(layout, @update_attrs)
+      assert {:ok, layout} = Sites.update_layout(layout, Factories.update_layout_attrs())
       assert %Layout{} = layout
       assert layout.content == "some updated content"
       assert layout.name == "some updated name"
@@ -249,7 +220,7 @@ defmodule ExCms.SitesTest do
 
     test "update_layout/2 with invalid data returns error changeset" do
       layout = layout_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_layout(layout, @invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Sites.update_layout(layout, Factories.invalid_layout_attrs())
       assert layout == Sites.get_layout!(layout.id)
     end
 

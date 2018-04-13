@@ -19,7 +19,9 @@ defmodule ExCms.Sites do
 
   """
   def list_sites do
-    Repo.all(Site)
+    Site
+    |> Repo.all()
+    |> Repo.preload([:pages, :layouts, :assets])
   end
 
   @doc """
