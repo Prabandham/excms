@@ -4,20 +4,19 @@ defmodule ExCms.Sites.Site do
 
   alias ExCms.Sites.{Page, Asset, Layout}
 
-
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "sites" do
-    field :description, :string
-    field :domain_name, :string
-    field :google_analytics_key, :string
-    field :is_active, :boolean, default: false
-    field :meta, :map, default: %{}
-    field :name, :string
+    field(:description, :string)
+    field(:domain_name, :string)
+    field(:google_analytics_key, :string)
+    field(:is_active, :boolean, default: false)
+    field(:meta, :map, default: %{})
+    field(:name, :string)
 
-    has_many :layouts, Layout
-    has_many :assets, Asset
-    has_many :pages, Page
+    has_many(:layouts, Layout)
+    has_many(:assets, Asset)
+    has_many(:pages, Page)
 
     timestamps()
   end

@@ -2,12 +2,11 @@ defmodule ExCms.Accounts.RequestAccount do
   use Ecto.Schema
   import Ecto.Changeset
 
-
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "requests" do
-    field :email, :string
-    field :message, :string
+    field(:email, :string)
+    field(:message, :string)
 
     timestamps()
   end

@@ -84,7 +84,10 @@ defmodule ExCms.SitesTest do
     test "create_pages/1 with valid data creates a pages" do
       layout = Factories.fabricate_layout()
       site = Sites.get_site!(layout.site_id)
-      valid_page_attrs = Enum.into(Factories.valid_page_attrs(), %{site_id: site.id, layout_id: layout.id})
+
+      valid_page_attrs =
+        Enum.into(Factories.valid_page_attrs(), %{site_id: site.id, layout_id: layout.id})
+
       assert {:ok, %Page{} = pages} = Sites.create_page(valid_page_attrs)
       assert pages.content == "some content"
       assert pages.description == "some description"
@@ -110,7 +113,10 @@ defmodule ExCms.SitesTest do
 
     test "update_pages/2 with invalid data returns error changeset" do
       pages = pages_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_page(pages, Factories.invalid_page_attrs())
+
+      assert {:error, %Ecto.Changeset{}} =
+               Sites.update_page(pages, Factories.invalid_page_attrs())
+
       assert pages == Sites.get_page!(pages.id)
     end
 
@@ -165,7 +171,10 @@ defmodule ExCms.SitesTest do
 
     test "update_asset/2 with invalid data returns error changeset" do
       asset = asset_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_asset(asset, Factories.invalid_asset_attrs())
+
+      assert {:error, %Ecto.Changeset{}} =
+               Sites.update_asset(asset, Factories.invalid_asset_attrs())
+
       assert asset == Sites.get_asset!(asset.id)
     end
 
@@ -220,7 +229,10 @@ defmodule ExCms.SitesTest do
 
     test "update_layout/2 with invalid data returns error changeset" do
       layout = layout_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_layout(layout, Factories.invalid_layout_attrs())
+
+      assert {:error, %Ecto.Changeset{}} =
+               Sites.update_layout(layout, Factories.invalid_layout_attrs())
+
       assert layout == Sites.get_layout!(layout.id)
     end
 

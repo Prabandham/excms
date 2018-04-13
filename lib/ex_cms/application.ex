@@ -11,7 +11,7 @@ defmodule ExCms.Application do
       # Start the Ecto repository
       supervisor(ExCms.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(ExCmsWeb.Endpoint, []),
+      supervisor(ExCmsWeb.Endpoint, [])
       # Start your own worker by calling: ExCms.Worker.start_link(arg1, arg2, arg3)
       # worker(ExCms.Worker, [arg1, arg2, arg3]),
     ]

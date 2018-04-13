@@ -4,14 +4,13 @@ defmodule ExCms.Sites.Layout do
 
   alias ExCms.Sites.Site
 
-
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "layouts" do
-    field :content, :string
-    field :name, :string
+    field(:content, :string)
+    field(:name, :string)
 
-    belongs_to :site, Site
+    belongs_to(:site, Site)
 
     timestamps()
   end

@@ -4,18 +4,17 @@ defmodule ExCms.Sites.Page do
 
   alias ExCms.Sites.{Site, Layout}
 
-
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "pages" do
-    field :content, :string
-    field :description, :string
-    field :is_active, :boolean, default: false
-    field :name, :string
-    field :title, :string
+    field(:content, :string)
+    field(:description, :string)
+    field(:is_active, :boolean, default: false)
+    field(:name, :string)
+    field(:title, :string)
 
-    belongs_to :site, Site
-    belongs_to :layout, Layout
+    belongs_to(:site, Site)
+    belongs_to(:layout, Layout)
 
     timestamps()
   end

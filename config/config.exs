@@ -15,8 +15,7 @@ config :ex_cms, ExCmsWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "kZRMLg6gezSAUzW3mmhz35MbWeXCPkt3r5th92m1JCG4ZdmWy4+ixlnb8sfrttSd",
   render_errors: [view: ExCmsWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: ExCms.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: ExCms.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -25,4 +24,4 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"

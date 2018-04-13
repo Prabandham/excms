@@ -2,11 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d0a492-490d-4b02-b2b0-a985337d4cc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/support/ex_cms/factories.ex" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
-      <change beforePath="$PROJECT_DIR$/projectFilesBackup/ex_cms.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/config/config.exs" afterPath="$PROJECT_DIR$/config/config.exs" />
+      <change beforePath="$PROJECT_DIR$/config/dev.exs" afterPath="$PROJECT_DIR$/config/dev.exs" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/accounts/admin.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/accounts/auth.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/accounts/auth.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/accounts/request_account.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/accounts/request_account.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/application.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/application.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/asset.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/asset.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/layout.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/layout.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/page.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/page.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/site.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/site.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/channels/user_socket.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/channels/user_socket.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/router.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/router.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/views/error_helpers.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/error_helpers.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/views/error_view.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/error_view.ex" />
+      <change beforePath="$PROJECT_DIR$/mix.exs" afterPath="$PROJECT_DIR$/mix.exs" />
+      <change beforePath="$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms/accounts/accounts_test.exs" />
       <change beforePath="$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/ex_cms_web/controllers/page_controller_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms_web/controllers/page_controller_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/ex_cms_web/views/error_view_test.exs" afterPath="$PROJECT_DIR$/test/ex_cms_web/views/error_view_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/support/channel_case.ex" afterPath="$PROJECT_DIR$/test/support/channel_case.ex" />
+      <change beforePath="$PROJECT_DIR$/test/support/conn_case.ex" afterPath="$PROJECT_DIR$/test/support/conn_case.ex" />
+      <change beforePath="$PROJECT_DIR$/test/support/ex_cms/factories.ex" afterPath="$PROJECT_DIR$/test/support/ex_cms/factories.ex" />
+      <change beforePath="$PROJECT_DIR$/test/test_helper.exs" afterPath="$PROJECT_DIR$/test/test_helper.exs" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/ex_cms/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/" />
@@ -26,7 +48,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sites_test.exs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sites_test.exs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -40,26 +62,11 @@
                 <element signature="e#1893#2060#0" expanded="false" />
                 <element signature="e#2021#2048#1" expanded="false" />
                 <element signature="e#2112#2207#0" expanded="false" />
-                <element signature="e#3231#3334#0" expanded="false" />
-                <element signature="e#3396#3797#0" expanded="false" />
-                <element signature="e#4326#4424#0" expanded="false" />
-                <element signature="e#4598#4682#0" expanded="false" />
-                <element signature="e#4740#4829#0" expanded="false" />
-                <element signature="e#5258#5363#0" expanded="false" />
-                <element signature="e#5425#5681#0" expanded="false" />
-                <element signature="e#5751#5942#0" expanded="false" />
-                <element signature="e#5988#6162#0" expanded="false" />
-                <element signature="e#6121#6150#1" expanded="false" />
-                <element signature="e#6216#6315#0" expanded="false" />
-                <element signature="e#6344#8278#0" expanded="false" />
-                <element signature="e#6643#6737#0" expanded="false" />
-                <element signature="e#6799#7106#0" expanded="false" />
-                <element signature="e#7177#7284#0" expanded="false" />
-                <element signature="e#7348#7614#0" expanded="false" />
-                <element signature="e#7685#7884#0" expanded="false" />
-                <element signature="e#7932#8113#0" expanded="false" />
-                <element signature="e#8070#8101#1" expanded="false" />
-                <element signature="e#8169#8272#0" expanded="false" />
+                <element signature="e#7729#7945#0" expanded="false" />
+                <element signature="e#6388#8339#0" expanded="false" />
+                <element signature="e#7993#8174#0" expanded="false" />
+                <element signature="e#8131#8162#1" expanded="false" />
+                <element signature="e#8230#8333#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -68,9 +75,16 @@
       <file leaf-file-name="factories.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/support/ex_cms/factories.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-              <folding />
+            <state relative-caret-position="336">
+              <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+              <folding>
+                <element signature="e#42#94#0" expanded="false" />
+                <element signature="e#31#2785#1" expanded="false" />
+                <element signature="e#1859#1995#0" expanded="false" />
+                <element signature="e#2032#2326#0" expanded="false" />
+                <element signature="e#2365#2558#0" expanded="false" />
+                <element signature="e#2596#2785#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,20 +93,23 @@
         <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/page.ex">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
-              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sites.ex" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sites.ex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/sites.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="651">
+              <caret line="401" column="0" lean-forward="false" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
               <folding>
                 <element signature="e#38#68#0" expanded="false" />
                 <element signature="e#27#6664#1" expanded="false" />
+                <element signature="e#27#6664#1" expanded="false" />
+                <element signature="e#206#306#0" expanded="false" />
+                <element signature="e#324#408#0" expanded="false" />
                 <element signature="e#417#623#0" expanded="false" />
                 <element signature="e#644#731#0" expanded="false" />
                 <element signature="e#740#924#0" expanded="false" />
@@ -102,7 +119,9 @@
                 <element signature="e#1354#1512#0" expanded="false" />
                 <element signature="e#1547#1577#0" expanded="false" />
                 <element signature="e#1586#1740#0" expanded="false" />
+                <element signature="e#1775#1813#0" expanded="false" />
                 <element signature="e#1851#1951#0" expanded="false" />
+                <element signature="e#1969#2084#0" expanded="false" />
                 <element signature="e#2093#2300#0" expanded="false" />
                 <element signature="e#2390#2574#0" expanded="false" />
                 <element signature="e#2607#2677#0" expanded="false" />
@@ -656,37 +675,33 @@
         <state relative-caret-position="924">
           <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
           <folding>
-            <element signature="e#34#5208#1" expanded="false" />
-            <element signature="e#556#684#0" expanded="false" />
-            <element signature="e#615#627#0" expanded="false" />
-            <element signature="e#730#862#0" expanded="false" />
-            <element signature="e#920#1057#0" expanded="false" />
-            <element signature="e#1117#1369#0" expanded="false" />
-            <element signature="e#1181#1193#0" expanded="false" />
-            <element signature="e#1439#1530#0" expanded="false" />
-            <element signature="e#1507#1521#0" expanded="false" />
-            <element signature="e#1592#1910#0" expanded="false" />
-            <element signature="e#1682#1695#0" expanded="false" />
-            <element signature="e#1980#2205#0" expanded="false" />
-            <element signature="e#2130#2144#0" expanded="false" />
-            <element signature="e#2251#2431#0" expanded="false" />
-            <element signature="e#2387#2419#1" expanded="false" />
-            <element signature="e#2485#2587#0" expanded="false" />
-            <element signature="e#2900#3058#0" expanded="false" />
-            <element signature="e#2969#2981#0" expanded="false" />
-            <element signature="e#3108#3227#0" expanded="false" />
-            <element signature="e#3305#3447#0" expanded="false" />
-            <element signature="e#3527#3750#0" expanded="false" />
-            <element signature="e#3620#3632#0" expanded="false" />
-            <element signature="e#3830#3931#0" expanded="false" />
-            <element signature="e#3908#3922#0" expanded="false" />
-            <element signature="e#4013#4341#0" expanded="false" />
-            <element signature="e#4153#4166#0" expanded="false" />
-            <element signature="e#4421#4671#0" expanded="false" />
-            <element signature="e#4566#4580#0" expanded="false" />
-            <element signature="e#4737#4986#0" expanded="false" />
-            <element signature="e#4922#4974#1" expanded="false" />
-            <element signature="e#5060#5202#0" expanded="false" />
+            <element signature="e#34#5381#1" expanded="false" />
+            <element signature="e#664#792#0" expanded="false" />
+            <element signature="e#723#735#0" expanded="false" />
+            <element signature="e#838#970#0" expanded="false" />
+            <element signature="e#1028#1165#0" expanded="false" />
+            <element signature="e#1225#1477#0" expanded="false" />
+            <element signature="e#1289#1301#0" expanded="false" />
+            <element signature="e#1547#1638#0" expanded="false" />
+            <element signature="e#1615#1629#0" expanded="false" />
+            <element signature="e#1700#2018#0" expanded="false" />
+            <element signature="e#1790#1803#0" expanded="false" />
+            <element signature="e#2088#2313#0" expanded="false" />
+            <element signature="e#2238#2252#0" expanded="false" />
+            <element signature="e#2359#2539#0" expanded="false" />
+            <element signature="e#2495#2527#1" expanded="false" />
+            <element signature="e#2593#2695#0" expanded="false" />
+            <element signature="e#3008#3166#0" expanded="false" />
+            <element signature="e#3077#3089#0" expanded="false" />
+            <element signature="e#3216#3335#0" expanded="false" />
+            <element signature="e#3413#3555#0" expanded="false" />
+            <element signature="e#3635#3874#0" expanded="false" />
+            <element signature="e#3954#4055#0" expanded="false" />
+            <element signature="e#4032#4046#0" expanded="false" />
+            <element signature="e#4137#4482#0" expanded="false" />
+            <element signature="e#4562#4829#0" expanded="false" />
+            <element signature="e#4895#5159#0" expanded="false" />
+            <element signature="e#5233#5375#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -771,13 +786,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+          <folding>
+            <element signature="e#114#2213#0" expanded="false" />
+            <element signature="e#255#335#0" expanded="false" />
+            <element signature="e#391#475#0" expanded="false" />
+            <element signature="e#1138#1597#0" expanded="false" />
+            <element signature="e#1666#1849#0" expanded="false" />
+            <element signature="e#1893#2060#0" expanded="false" />
+            <element signature="e#2021#2048#1" expanded="false" />
+            <element signature="e#2112#2207#0" expanded="false" />
+            <element signature="e#7729#7945#0" expanded="false" />
+            <element signature="e#6388#8339#0" expanded="false" />
+            <element signature="e#7993#8174#0" expanded="false" />
+            <element signature="e#8131#8162#1" expanded="false" />
+            <element signature="e#8230#8333#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/support/ex_cms/factories.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+          <folding>
+            <element signature="e#42#94#0" expanded="false" />
+            <element signature="e#31#2785#1" expanded="false" />
+            <element signature="e#1859#1995#0" expanded="false" />
+            <element signature="e#2032#2326#0" expanded="false" />
+            <element signature="e#2365#2558#0" expanded="false" />
+            <element signature="e#2596#2785#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/page.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/sites.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="651">
+          <caret line="401" column="0" lean-forward="false" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
           <folding>
             <element signature="e#38#68#0" expanded="false" />
             <element signature="e#27#6664#1" expanded="false" />
+            <element signature="e#27#6664#1" expanded="false" />
+            <element signature="e#206#306#0" expanded="false" />
+            <element signature="e#324#408#0" expanded="false" />
             <element signature="e#417#623#0" expanded="false" />
             <element signature="e#644#731#0" expanded="false" />
             <element signature="e#740#924#0" expanded="false" />
@@ -787,7 +850,9 @@
             <element signature="e#1354#1512#0" expanded="false" />
             <element signature="e#1547#1577#0" expanded="false" />
             <element signature="e#1586#1740#0" expanded="false" />
+            <element signature="e#1775#1813#0" expanded="false" />
             <element signature="e#1851#1951#0" expanded="false" />
+            <element signature="e#1969#2084#0" expanded="false" />
             <element signature="e#2093#2300#0" expanded="false" />
             <element signature="e#2390#2574#0" expanded="false" />
             <element signature="e#2607#2677#0" expanded="false" />
@@ -819,59 +884,6 @@
             <element signature="e#6378#6410#0" expanded="false" />
             <element signature="e#6419#6581#0" expanded="false" />
             <element signature="e#6622#6664#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/page.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/support/ex_cms/factories.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ex_cms/sites/sites_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
-          <folding>
-            <element signature="e#114#2213#0" expanded="false" />
-            <element signature="e#255#335#0" expanded="false" />
-            <element signature="e#391#475#0" expanded="false" />
-            <element signature="e#1138#1597#0" expanded="false" />
-            <element signature="e#1666#1849#0" expanded="false" />
-            <element signature="e#1893#2060#0" expanded="false" />
-            <element signature="e#2021#2048#1" expanded="false" />
-            <element signature="e#2112#2207#0" expanded="false" />
-            <element signature="e#3231#3334#0" expanded="false" />
-            <element signature="e#3396#3797#0" expanded="false" />
-            <element signature="e#4326#4424#0" expanded="false" />
-            <element signature="e#4598#4682#0" expanded="false" />
-            <element signature="e#4740#4829#0" expanded="false" />
-            <element signature="e#5258#5363#0" expanded="false" />
-            <element signature="e#5425#5681#0" expanded="false" />
-            <element signature="e#5751#5942#0" expanded="false" />
-            <element signature="e#5988#6162#0" expanded="false" />
-            <element signature="e#6121#6150#1" expanded="false" />
-            <element signature="e#6216#6315#0" expanded="false" />
-            <element signature="e#6344#8278#0" expanded="false" />
-            <element signature="e#6643#6737#0" expanded="false" />
-            <element signature="e#6799#7106#0" expanded="false" />
-            <element signature="e#7177#7284#0" expanded="false" />
-            <element signature="e#7348#7614#0" expanded="false" />
-            <element signature="e#7685#7884#0" expanded="false" />
-            <element signature="e#7932#8113#0" expanded="false" />
-            <element signature="e#8070#8101#1" expanded="false" />
-            <element signature="e#8169#8272#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -6,9 +6,27 @@ defmodule ExCms.AccountsTest do
   describe "admins" do
     alias ExCms.Accounts.Admin
 
-    @valid_attrs %{attributes: %{}, email: "test@test.com", full_name: "some full_name", is_active: true, password: "some_password"}
-    @update_attrs %{attributes: %{}, email: "test@larks.in", full_name: "some updated full_name", is_active: false, password: "some_updated_password"}
-    @invalid_attrs %{attributes: nil, email: nil, full_name: nil, is_active: nil, password_hash: nil}
+    @valid_attrs %{
+      attributes: %{},
+      email: "test@test.com",
+      full_name: "some full_name",
+      is_active: true,
+      password: "some_password"
+    }
+    @update_attrs %{
+      attributes: %{},
+      email: "test@larks.in",
+      full_name: "some updated full_name",
+      is_active: false,
+      password: "some_updated_password"
+    }
+    @invalid_attrs %{
+      attributes: nil,
+      email: nil,
+      full_name: nil,
+      is_active: nil,
+      password_hash: nil
+    }
 
     def admin_fixture(attrs \\ %{}) do
       {:ok, admin} =
@@ -99,7 +117,9 @@ defmodule ExCms.AccountsTest do
     end
 
     test "create_request_account/1 with valid data creates a request_account" do
-      assert {:ok, %RequestAccount{} = request_account} = Accounts.create_request_account(@valid_attrs)
+      assert {:ok, %RequestAccount{} = request_account} =
+               Accounts.create_request_account(@valid_attrs)
+
       assert request_account.email == "test@test.com"
       assert request_account.message == "some message"
     end
@@ -110,7 +130,10 @@ defmodule ExCms.AccountsTest do
 
     test "update_request_account/2 with valid data updates the request_account" do
       request_account = request_account_fixture()
-      assert {:ok, request_account} = Accounts.update_request_account(request_account, @update_attrs)
+
+      assert {:ok, request_account} =
+               Accounts.update_request_account(request_account, @update_attrs)
+
       assert %RequestAccount{} = request_account
       assert request_account.email == "test@larks.in"
       assert request_account.message == "some updated message"
@@ -118,14 +141,20 @@ defmodule ExCms.AccountsTest do
 
     test "update_request_account/2 with invalid data returns error changeset" do
       request_account = request_account_fixture()
-      assert {:error, %Ecto.Changeset{}} = Accounts.update_request_account(request_account, @invalid_attrs)
+
+      assert {:error, %Ecto.Changeset{}} =
+               Accounts.update_request_account(request_account, @invalid_attrs)
+
       assert request_account == Accounts.get_request_account!(request_account.id)
     end
 
     test "delete_request_account/1 deletes the request_account" do
       request_account = request_account_fixture()
       assert {:ok, %RequestAccount{}} = Accounts.delete_request_account(request_account)
-      assert_raise Ecto.NoResultsError, fn -> Accounts.get_request_account!(request_account.id) end
+
+      assert_raise Ecto.NoResultsError, fn ->
+        Accounts.get_request_account!(request_account.id)
+      end
     end
 
     test "change_request_account/1 returns a request_account changeset" do
