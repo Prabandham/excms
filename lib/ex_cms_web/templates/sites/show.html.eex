@@ -1,0 +1,34 @@
+<h4><%= @site.name %></h4>
+<hr />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Domain Name</th>
+        <td><%= @site.domain_name %></td>
+    </tr>
+    <tr>
+        <th>Google Analytics key</th>
+        <td><%= @site.google_analytics_key %></td>
+    </tr>
+    <tr>
+        <th>Is Active</th>
+        <td><%= @site.is_active %></td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td><%= @site.description %></td>
+    </tr>
+    <tr>
+        <th>Meta Data</th>
+        <th >
+            <table class="table table-condensed table-sm table-bordered">
+                <%= for {k,v} <- @site.meta do %>
+                   <tr>
+                      <th><%= k %></th>
+                      <td><%= v %></td>
+                   </tr>
+                <% end %>
+            </table>
+        </th>
+    </tr>
+</table>

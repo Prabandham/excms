@@ -13,17 +13,30 @@
 
   <body>
     <%= if(should_show_nav_bar?(@conn)) do %>
-        <p>This is a test</p>
-        <!-- TODO CREATE A NAVBAR Component and render that here -->
+        <nav class="pushy pushy-left">
+            <div class="pushy-content">
+                <ul>
+                    <li class="pushy-link"><a href="#">Sites</a></li>
+                    <li class="pushy-link"><a href="#">Assets</a></li>
+                    <li class="pushy-link"><a href="#">Layouts</a></li>
+                    <li class="pushy-link"><a href="#">Pages</a></li>
+                </ul>
+            </div>
+        </nav>
     <% end %>
 
-    <div class="container">
-      <%= if(get_flash(@conn, :info)) do %>
-        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <% end %>
-      <%= if(get_flash(@conn, :error)) do %>
-        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <% end %>
+    <div class="site-overlay"></div>
+
+    <div class="container" id="container">
+        <%= if(should_show_nav_bar?(@conn)) do %>
+            <h4 class="menu-btn">&#9776; ExCms</h4>
+        <% end  %>
+        <%= if(get_flash(@conn, :info)) do %>
+          <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+        <% end %>
+        <%= if(get_flash(@conn, :error)) do %>
+          <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        <% end %>
 
       <main role="main">
         <%= render @view_module, @view_template, assigns %>

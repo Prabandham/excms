@@ -18,6 +18,8 @@ defmodule ExCmsWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
+    get("/home", DashboardController, :index)
+    resources("/sites", SitesController)
   end
 
   # Other scopes may use custom stacks.
