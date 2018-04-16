@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col col-xs-6"
+        <h4>Listing Assets</h4>
+     </div>
+     <div class="col col-xs-6">
+        <%= link("New Asset", to: assets_path(@conn, :new), class: "btn btn-outline btn-primary float-right") %>
+     </div>
+</div>
+<hr />
+
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Site Name</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <%= for asset <- @assets do %>
+            <tr>
+                <td><%= asset.name %></td>
+                <td><%= asset.site.name %></td>
+                <td> Show</td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

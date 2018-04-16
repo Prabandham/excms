@@ -15,6 +15,13 @@ defmodule ExCmsWeb.Endpoint do
     only: ~w(css fonts images js favicon.ico robots.txt)
   )
 
+  plug(
+    Plug.Static,
+    at: "/cms_assets",
+    from: Path.expand("./cms_assets"),
+    gzip: true
+  )
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do

@@ -220,7 +220,9 @@ defmodule ExCms.Sites do
 
   """
   def list_assets do
-    Repo.all(Asset)
+    Asset
+    |> Repo.all()
+    |> Repo.preload(:site)
   end
 
   @doc """

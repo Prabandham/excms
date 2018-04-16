@@ -1,4 +1,4 @@
-defmodule Utils.BuildPage do
+defmodule ExCms.Utils.BuildPage do
   @moduledoc """
     This module will take a page from the db with its sites and assets and layouts and do the neccessary parsing
     like converting the content from markdown to HTML and then render it with the proper layout.
