@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-6" id="editor-div">
+        <%= form_for @changeset, @action, fn f -> %>
+            <div class="form-group">
+                <label>Name</label>
+                <%= text_input f, :name, class: "from-control" %>
+                <%= error_tag(f, :name_for_layout) %>
+            </div>
+
+            <div class="form-group">
+                <label>Content</label>
+                <%= select f, :site_id, Enum.map(@sites, &{&1.name, &1.id}), prompt: "Choose Site", class: "form-control" %>
+                <%= error_tag(f, :site_id) %>
+            </div>
+
+            <label>Content</label> <span id="show_editor"><button class="btn btn-sm btn-primary">Show Editor</button></span>
+            <div id="layout_content" style="height: 100%; width: 100%"></div>
+
+            <div class="form-group">
+              <%= submit "Submit", class: "btn btn-primary" %>
+            </div>
+        <% end %>
+    </div>
+
+    <div class="col-xs-6 text-right" id="preview-div">
+        This is where the preview will come.
+    </div>
+</div>
