@@ -41,4 +41,30 @@ defmodule ExCmsWeb.AssetsController do
           render(conn, "new.html", changeset: changeset, sites: sites)
       end
   end
+
+  def edit(conn, %{"id" => id}) do
+    asset = ExCms.Sites.get_asset!(id)
+    changeset = ExCms.Sites.change_asset(asset)
+    sites = ExCms.Sites.list_sites()
+    render(conn, "edit.html", changeset: changeset, sites: sites)
+  end
+
+  def delete(conn, %{"id" => id}) do
+    asset = ExCms.Sites.get_asset!(id)
+
+    case ExCms.Repo.delete(asset) do
+      {:ok, struct} ->
+        # TODO also check if this was successful
+        File.rm(asset.content)
+
+        conn
+        |> put_flash(:info, "Asset successfully deleted !")
+        |> redirect(to: assets_path(conn, :index))
+
+      {:error, changeset} ->
+        conn
+        |> put_flash(:alert, "Asset could not be deleted !")
+        |> render("index.html")
+    end
+  end
 end

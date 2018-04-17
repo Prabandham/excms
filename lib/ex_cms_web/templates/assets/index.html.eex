@@ -12,6 +12,7 @@
     <thead>
         <th>Name</th>
         <th>Site Name</th>
+        <th>Asset Type</th>
         <th>Actions</th>
     </thead>
     <tbody>
@@ -19,7 +20,11 @@
             <tr>
                 <td><%= asset.name %></td>
                 <td><%= asset.site.name %></td>
-                <td> Show</td>
+                <td><%= get_type(asset) %></td>
+                <td>
+                    <%= link("Edit", to: assets_path(@conn, :edit, asset.id), class: "btn btn-sm btn-warning") %>
+                    <%= link("Delete", to: assets_path(@conn, :delete, asset.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-danger") %>
+                </td>
             </tr>
         <% end %>
     </tbody>

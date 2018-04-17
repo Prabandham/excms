@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d0a492-490d-4b02-b2b0-a985337d4cc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/_custom.scss" afterPath="$PROJECT_DIR$/assets/css/_custom.scss" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/utils/utils/build_page.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/sites_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/sites_controller.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/router.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/router.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/views/dashboard_view.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/dashboard_view.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/views/sites_view.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/sites_view.ex" />
+      <change beforePath="$PROJECT_DIR$/cms_assets/anchor.min.js-98cbed42-7205-4dd8-b273-817047207495.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/ex_cms/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/" />
@@ -38,11 +30,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="assets_controller.ex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="assets_controller.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="338">
+              <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.eex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.eex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assets_view.ex" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -104,17 +126,18 @@
         <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/sites_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/sites/show.html.eex" />
         <option value="$PROJECT_DIR$/assets/css/_custom.scss" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/router.ex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/from.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex" />
       </list>
     </option>
   </component>
@@ -165,12 +188,20 @@
             <path>
               <item name="ex_cms" type="b2602c69:ProjectViewProjectNode" />
               <item name="ex_cms" type="462c0819:PsiDirectoryNode" />
-              <item name="cms_assets" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ex_cms" type="b2602c69:ProjectViewProjectNode" />
               <item name="ex_cms" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ex_cms_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ex_cms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex_cms" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ex_cms_web" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,7 +219,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="SearchEverywhereHistoryKey" value="end&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/endpoint.ex&#10;_custom&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/css/_custom.scss&#10;sites&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;asset.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;sites.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/router.ex&#10;ass&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;custom&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/assets/css/_custom.scss&#10;site.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/site.ex&#10;_cu&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/assets/css/_custom.scss&#10;router&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms_web/router.ex&#10;page.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;la&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/layout.ex&#10;admin&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/accounts/admin.ex&#10;mix&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/mix.exs&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;mix.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/mix.exs&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex" />
+    <property name="SearchEverywhereHistoryKey" value="assets_v&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/views/assets_view.ex&#10;end&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/endpoint.ex&#10;_custom&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/css/_custom.scss&#10;sites&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;asset.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;sites.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/router.ex&#10;ass&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;custom&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/assets/css/_custom.scss&#10;site.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/site.ex&#10;_cu&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/assets/css/_custom.scss&#10;router&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms_web/router.ex&#10;page.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;la&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/layout.ex&#10;admin&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/accounts/admin.ex&#10;mix&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/mix.exs&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;mix.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/mix.exs&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -320,13 +351,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/accounts/auth.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/page/index.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -653,26 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/sites/index.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -697,14 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -772,10 +772,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="338">
+          <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
         </state>
       </provider>
