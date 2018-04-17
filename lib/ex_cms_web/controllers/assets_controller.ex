@@ -16,7 +16,7 @@ defmodule ExCmsWeb.AssetsController do
     path =
       if upload = assets_params["content"] do
         extension = Path.extname(upload.filename)
-        "./cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
+        "/cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
       end
 
     assets_params = Map.put(assets_params, "content", path)
@@ -55,7 +55,8 @@ defmodule ExCmsWeb.AssetsController do
     case ExCms.Repo.delete(asset) do
       {:ok, struct} ->
         # TODO also check if this was successful
-        File.rm(asset.content)
+        path = "." <> asset.content
+        File.rm(path)
 
         conn
         |> put_flash(:info, "Asset successfully deleted !")
