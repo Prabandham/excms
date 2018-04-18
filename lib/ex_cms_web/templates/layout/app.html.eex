@@ -16,10 +16,10 @@
         <nav class="pushy pushy-left">
             <div class="pushy-content">
                 <ul>
-                    <li class="pushy-link"><a href="#">Sites</a></li>
-                    <li class="pushy-link"><a href="#">Assets</a></li>
-                    <li class="pushy-link"><a href="#">Layouts</a></li>
-                    <li class="pushy-link"><a href="#">Pages</a></li>
+                    <li class="pushy-link"><a href="/sites">Sites</a></li>
+                    <li class="pushy-link"><a href="/assets">Assets</a></li>
+                    <li class="pushy-link"><a href="/layouts">Layouts</a></li>
+                    <li class="pushy-link"><a href="/pages">Pages</a></li>
                 </ul>
             </div>
         </nav>

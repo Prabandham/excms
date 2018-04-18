@@ -32,4 +32,35 @@ defmodule ExCmsWeb.LayoutsController do
     sites = ExCms.Sites.list_sites()
     render(conn, "edit.html", changeset: changeset, sites: sites, lay: layout)
   end
+
+  def update(conn, %{"id" => id, "layout" => layout_params}) do
+    layout = ExCms.Sites.get_layout!(id)
+    case ExCms.Sites.update_layout(layout, layout_params) do
+      {:ok, layout} ->
+        conn
+        |> put_flash(:info, "Layout updated Successfully")
+        |> redirect(to: layouts_path(conn, :index))
+      {:error, changeset} ->
+        sites = ExCms.Sites.list_sites()
+        conn
+        |> put_flash(:alert, "Please check the errors below")
+        |> render("edit.html", changeset: changeset, sites: sites, lay: layout)
+    end
+  end
+
+  def delete(conn, %{"id" => id}) do
+    asset = ExCms.Sites.get_layout!(id)
+
+    case ExCms.Repo.delete(asset) do
+      {:ok, struct} ->
+        conn
+        |> put_flash(:info, "Layout successfully deleted !")
+        |> redirect(to: layouts_path(conn, :index))
+
+      {:error, changeset} ->
+        conn
+        |> put_flash(:alert, "Layout could not be deleted !")
+        |> render("index.html")
+    end
+  end
 end

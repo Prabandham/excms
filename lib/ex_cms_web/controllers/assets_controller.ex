@@ -36,7 +36,6 @@ defmodule ExCmsWeb.AssetsController do
           end
 
         {:error, changeset} ->
-          IO.inspect(changeset)
           sites = ExCms.Sites.list_sites()
           render(conn, "new.html", changeset: changeset, sites: sites)
       end
@@ -47,6 +46,29 @@ defmodule ExCmsWeb.AssetsController do
     changeset = ExCms.Sites.change_asset(asset)
     sites = ExCms.Sites.list_sites()
     render(conn, "edit.html", changeset: changeset, sites: sites, asset: asset)
+  end
+
+  def update(conn, %{"id" => id, "asset" => assets_params}) do
+    asset = ExCms.Sites.get_asset!(id)
+    path =
+      if upload = assets_params["content"] do
+        extension = Path.extname(upload.filename)
+        "/cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
+      end
+
+    assets_params = Map.put(assets_params, "content", path)
+    case ExCms.Sites.update_asset(asset, assets_params) do
+      {:ok, asset} ->
+        conn
+        |> put_flash(:info, "Successfuly updated asset")
+        |> redirect(to: assets_path(conn, :index))
+      {:error, changeset} ->
+        sites = ExCms.Sites.list_sites()
+        conn
+        |> put_flash(:alert, "Please check errors below")
+        |> render("edit.html", changeset: changeset, sites: sites, asset: asset)
+    end
+
   end
 
   def delete(conn, %{"id" => id}) do
