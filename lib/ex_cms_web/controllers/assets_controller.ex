@@ -46,7 +46,7 @@ defmodule ExCmsWeb.AssetsController do
     asset = ExCms.Sites.get_asset!(id)
     changeset = ExCms.Sites.change_asset(asset)
     sites = ExCms.Sites.list_sites()
-    render(conn, "edit.html", changeset: changeset, sites: sites)
+    render(conn, "edit.html", changeset: changeset, sites: sites, asset: asset)
   end
 
   def delete(conn, %{"id" => id}) do

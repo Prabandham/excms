@@ -55,10 +55,22 @@ main {
   color: red;
 }
 
-.full-screen-edit { 
+#editor-div {
+  border-right: 2px solid black;
+  margin-right: 10px;
+  padding-right: 20px;
+  width: 600px !important;
+  height: 100%;
+}
+
+.ace_editor {
+  height: 420px !important;
+}
+
+.full-screen { 
   position: absolute !important;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
 }

@@ -23,20 +23,11 @@ import "./pushy.min"
 
 $(document).ready(function() {
     var editor = ace.edit("layout_content");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/html_elixir");
-
-    $("#show_editor").on("click", function(e) {
-        e.preventDefault();
-        $($(".ace_editor")[0]).addClass("full-screen-edit")
-    });
-
-    editor.commands.addCommand({
-        name: 'Close Editor',
-        bindKey: {win: 'Ctrl-X',  mac: 'Command-X'},
-        exec: function(editor) {
-            $($(".ace_editor")[0]).removeClass("full-screen-edit")
-        },
-        readOnly: true // false if this command should not apply in readOnly mode
+    editor.setOptions({
+        maxLines: 25,
+        autoScrollEditorIntoView: true,
+        theme: "ace/theme/monokai",
+        showPrintMargin: false,
+        mode: "ace/mode/html_elixir"
     });
 })

@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d0a492-490d-4b02-b2b0-a985337d4cc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/index.html.eex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/views/layouts_view.ex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/assets/css/_custom.scss" afterPath="$PROJECT_DIR$/assets/css/_custom.scss" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/router.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/router.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/ex_cms/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/" />
@@ -34,44 +33,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layouts_controller.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex">
+      <file leaf-file-name="edit.html.eex" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="15">
+              <caret line="1" column="88" lean-forward="false" selection-start-line="1" selection-start-column="88" selection-end-line="1" selection-end-column="88" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.html.eex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.html.eex" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/brunch-config.js" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/page/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/views/layout_view.ex" />
@@ -131,23 +97,24 @@
         <option value="$PROJECT_DIR$/assets/css/_custom.scss" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/from.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/views/assets_view.ex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/views/layouts_view.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/router.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/index.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex" />
       </list>
     </option>
   </component>
@@ -188,6 +155,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,23 +199,13 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="ex_cms_web" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex_cms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex_cms" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="ex_cms_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,21 +303,21 @@
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20930232" sideWeight="0.4945504" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18534179" sideWeight="0.4945504" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17890625" sideWeight="0.5054496" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -389,14 +348,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/application.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/elixir/1.6.4/lib/elixir/ebin/Elixir.Kernel.beam" />
     <entry file="file://$PROJECT_DIR$/lib/ex_cms.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -409,7 +360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -438,7 +388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" column="85" lean-forward="false" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -467,7 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -475,14 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
-          <folding>
-            <element signature="e#42#94#0" expanded="false" />
-            <element signature="e#31#2785#1" expanded="false" />
-            <element signature="e#1859#1995#0" expanded="false" />
-            <element signature="e#2032#2326#0" expanded="false" />
-            <element signature="e#2365#2558#0" expanded="false" />
-            <element signature="e#2596#2785#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -490,19 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
-          <folding>
-            <element signature="e#114#2213#0" expanded="false" />
-            <element signature="e#255#335#0" expanded="false" />
-            <element signature="e#391#475#0" expanded="false" />
-            <element signature="e#1138#1597#0" expanded="false" />
-            <element signature="e#1666#1849#0" expanded="false" />
-            <element signature="e#1893#2060#0" expanded="false" />
-            <element signature="e#2021#2048#1" expanded="false" />
-            <element signature="e#2112#2207#0" expanded="false" />
-            <element signature="e#7993#8174#0" expanded="false" />
-            <element signature="e#8131#8162#1" expanded="false" />
-            <element signature="e#8230#8333#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -566,31 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="37" column="2" lean-forward="false" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
-          <folding>
-            <element signature="e#41#74#0" expanded="false" />
-            <element signature="e#166#269#0" expanded="false" />
-            <element signature="e#288#316#0" expanded="false" />
-            <element signature="e#325#536#0" expanded="false" />
-            <element signature="e#592#780#0" expanded="false" />
-            <element signature="e#814#886#0" expanded="false" />
-            <element signature="e#895#1101#0" expanded="false" />
-            <element signature="e#1146#1215#0" expanded="false" />
-            <element signature="e#1224#1388#0" expanded="false" />
-            <element signature="e#1426#1457#0" expanded="false" />
-            <element signature="e#1466#1624#0" expanded="false" />
-            <element signature="e#1662#1702#0" expanded="false" />
-            <element signature="e#1750#1866#0" expanded="false" />
-            <element signature="e#1887#1924#0" expanded="false" />
-            <element signature="e#1933#2193#0" expanded="false" />
-            <element signature="e#2268#2495#0" expanded="false" />
-            <element signature="e#2539#2629#0" expanded="false" />
-            <element signature="e#2638#2903#0" expanded="false" />
-            <element signature="e#2977#3065#0" expanded="false" />
-            <element signature="e#3074#3296#0" expanded="false" />
-            <element signature="e#3363#3404#0" expanded="false" />
-            <element signature="e#3413#3610#0" expanded="false" />
-            <element signature="e#3677#3736#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -605,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -620,7 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,7 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,7 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,15 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,7 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,55 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="e#38#68#0" expanded="false" />
-            <element signature="e#27#6699#1" expanded="false" />
-            <element signature="e#206#306#0" expanded="false" />
-            <element signature="e#324#408#0" expanded="false" />
-            <element signature="e#417#623#0" expanded="false" />
-            <element signature="e#644#731#0" expanded="false" />
-            <element signature="e#740#924#0" expanded="false" />
-            <element signature="e#957#1027#0" expanded="false" />
-            <element signature="e#1036#1236#0" expanded="false" />
-            <element signature="e#1278#1345#0" expanded="false" />
-            <element signature="e#1354#1512#0" expanded="false" />
-            <element signature="e#1547#1577#0" expanded="false" />
-            <element signature="e#1586#1740#0" expanded="false" />
-            <element signature="e#1775#1813#0" expanded="false" />
-            <element signature="e#1851#1951#0" expanded="false" />
-            <element signature="e#1969#2084#0" expanded="false" />
-            <element signature="e#2093#2300#0" expanded="false" />
-            <element signature="e#2390#2574#0" expanded="false" />
-            <element signature="e#2607#2677#0" expanded="false" />
-            <element signature="e#2686#2886#0" expanded="false" />
-            <element signature="e#2928#2995#0" expanded="false" />
-            <element signature="e#3004#3162#0" expanded="false" />
-            <element signature="e#3197#3227#0" expanded="false" />
-            <element signature="e#3236#3391#0" expanded="false" />
-            <element signature="e#3426#3464#0" expanded="false" />
-            <element signature="e#3503#3606#0" expanded="false" />
-            <element signature="e#3625#3688#0" expanded="false" />
-            <element signature="e#3697#3908#0" expanded="false" />
-            <element signature="e#3964#4152#0" expanded="false" />
-            <element signature="e#4186#4258#0" expanded="false" />
-            <element signature="e#4267#4473#0" expanded="false" />
-            <element signature="e#4518#4587#0" expanded="false" />
-            <element signature="e#4596#4760#0" expanded="false" />
-            <element signature="e#4798#4829#0" expanded="false" />
-            <element signature="e#4838#4996#0" expanded="false" />
-            <element signature="e#5034#5074#0" expanded="false" />
-            <element signature="e#5114#5220#0" expanded="false" />
-            <element signature="e#5240#5269#0" expanded="false" />
-            <element signature="e#5278#5494#0" expanded="false" />
-            <element signature="e#5552#5744#0" expanded="false" />
-            <element signature="e#5779#5853#0" expanded="false" />
-            <element signature="e#5862#6074#0" expanded="false" />
-            <element signature="e#6122#6193#0" expanded="false" />
-            <element signature="e#6202#6372#0" expanded="false" />
-            <element signature="e#6413#6445#0" expanded="false" />
-            <element signature="e#6454#6616#0" expanded="false" />
-            <element signature="e#6657#6699#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,7 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,11 +612,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/index.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/Elixir.ExCms.Sites.beam">
+      <provider editor-type-id="BEAM">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -794,75 +666,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/index.html.eex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="88" lean-forward="false" selection-start-line="1" selection-start-column="88" selection-end-line="1" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>

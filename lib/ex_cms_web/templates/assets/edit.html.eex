@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col col-xs-6">
-        <h4>Create new Asset</h4>
+        <h4>Update Asset</h4>
     </div>
     <div class="col col-xs-6">
         <%= link("Back", to: assets_path(@conn, :index), class: "btn btn-info float-right") %>
@@ -10,5 +10,5 @@
  <hr />
 
  <div class="row">
-    <%= render "form.html", Map.put(assigns, :action , assets_path(@conn, :create)) %>
+    <%= render "form.html", Map.put(assigns, :action , assets_path(@conn, :update, @asset)) %>
 </div>

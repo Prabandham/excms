@@ -24,4 +24,11 @@ defmodule ExCmsWeb.LayoutsController do
         |> render("new.html", changeset: changeset)
     end
   end
+
+  def edit(conn, %{"id" => id}) do
+    layout = ExCms.Sites.get_layout!(id)
+    changeset = ExCms.Sites.change_layout(layout)
+    sites = ExCms.Sites.list_sites()
+    render(conn, "edit.html", changeset: changeset, sites: sites, lay: layout)
+  end
 end

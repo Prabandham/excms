@@ -3,21 +3,26 @@
         <%= form_for @changeset, @action, fn f -> %>
             <div class="form-group">
                 <label>Name</label>
-                <%= text_input f, :name, class: "from-control" %>
+                <%= text_input f, :name, class: "form-control" %>
                 <%= error_tag(f, :name_for_layout) %>
             </div>
 
             <div class="form-group">
-                <label>Content</label>
+                <label>Site</label>
                 <%= select f, :site_id, Enum.map(@sites, &{&1.name, &1.id}), prompt: "Choose Site", class: "form-control" %>
                 <%= error_tag(f, :site_id) %>
             </div>
 
-            <label>Content</label> <span id="show_editor"><button class="btn btn-sm btn-primary">Show Editor</button></span>
-            <div id="layout_content" style="height: 100%; width: 100%"></div>
+            <div class="form-group" style="height: 432px">
+                <label>Content</label>
+                <%= textarea f, :content, style: "width:100%;height:400px;" %>
+                <%= error_tag(f, :content) %>
+            </div>
 
             <div class="form-group">
               <%= submit "Submit", class: "btn btn-primary" %>
+
+              <%= link("Back", to: layouts_path(@conn, :index), class: "btn btn-info float-right") %>
             </div>
         <% end %>
     </div>
