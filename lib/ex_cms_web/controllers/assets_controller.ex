@@ -50,6 +50,7 @@ defmodule ExCmsWeb.AssetsController do
 
   def update(conn, %{"id" => id, "asset" => assets_params}) do
     asset = ExCms.Sites.get_asset!(id)
+
     path =
       if upload = assets_params["content"] do
         extension = Path.extname(upload.filename)
@@ -57,18 +58,20 @@ defmodule ExCmsWeb.AssetsController do
       end
 
     assets_params = Map.put(assets_params, "content", path)
+
     case ExCms.Sites.update_asset(asset, assets_params) do
       {:ok, asset} ->
         conn
         |> put_flash(:info, "Successfuly updated asset")
         |> redirect(to: assets_path(conn, :index))
+
       {:error, changeset} ->
         sites = ExCms.Sites.list_sites()
+
         conn
         |> put_flash(:alert, "Please check errors below")
         |> render("edit.html", changeset: changeset, sites: sites, asset: asset)
     end
-
   end
 
   def delete(conn, %{"id" => id}) do

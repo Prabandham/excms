@@ -122,7 +122,6 @@ defmodule ExCms.Sites do
   """
   def list_pages do
     Page
-    |> Ecto.Query.where(is_active: ^true)
     |> Repo.all()
     |> Repo.preload([:site, :layout])
   end
@@ -322,6 +321,20 @@ defmodule ExCms.Sites do
   end
 
   @doc """
+  Returns the list of layouts for the given site
+
+  ## Examples
+
+  iex> list_layouts(site.id)
+  [%Layout{}, ...]
+"""
+
+  def list_layouts(site_id) do
+    site = get_site!(site_id)
+    site.layouts
+  end
+
+  @doc """
   Gets a single layout.
 
   Raises `Ecto.NoResultsError` if the Layout does not exist.
@@ -351,6 +364,7 @@ defmodule ExCms.Sites do
   """
   def create_layout(attrs \\ %{}) do
     IO.inspect(attrs)
+
     %Layout{}
     |> Layout.changeset(attrs)
     |> Repo.insert()

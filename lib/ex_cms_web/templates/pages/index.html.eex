@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col col-xs-6"
+        <h4>Listing Pages</h4>
+     </div>
+     <div class="col col-xs-6">
+        <%= link("New Page", to: pages_path(@conn, :new), class: "btn btn-outline btn-primary float-right") %>
+     </div>
+</div>
+<hr />
+
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Is Active</th>
+        <th>Title</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <%= for page <- @pages do %>
+            <tr>
+                <td><%= page.name %></td>
+                <td><%= page.is_active %></td>
+                <td><%= page.title %></td>
+                <td>
+                    <%= link("Edit", to: pages_path(@conn, :edit, page.id), class: "btn btn-sm btn-warning") %>
+                    <%= link("Delete", to: pages_path(@conn, :delete, page.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-danger") %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

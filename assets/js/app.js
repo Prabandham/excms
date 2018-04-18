@@ -43,4 +43,26 @@ $(document).ready(function() {
             $("#layout_content").val(val);
         });
     }
+
+    if($("#page_editor").length) {
+
+        var page_editor_content = $("#page_content").val();
+        var page_editor = ace.edit("page_editor");
+
+        page_editor.setValue(page_editor_content);
+        page_editor.clearSelection(); // This will remove the highlight over the text
+
+        page_editor.setOptions({
+            maxLines: 25,
+            autoScrollEditorIntoView: true,
+            theme: "ace/theme/monokai",
+            showPrintMargin: false,
+            mode: "ace/mode/html_elixir"
+        });
+
+        page_editor.getSession().on('change', function() {
+            var val = page_editor.getSession().getValue();
+            $("#page_content").val(val);
+        });
+    }
 })

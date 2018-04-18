@@ -19,9 +19,11 @@ defmodule ExCmsWeb.Router do
 
     get("/", PageController, :index)
     get("/home", DashboardController, :index)
+
     resources("/sites", SitesController)
     resources("/assets", AssetsController)
     resources("/layouts", LayoutsController)
+    resources("/pages", PagesController)
   end
 
   # Other scopes may use custom stacks.
