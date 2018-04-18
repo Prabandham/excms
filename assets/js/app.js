@@ -22,12 +22,25 @@ import "./pushy.min"
 // import socket from "./socket"
 
 $(document).ready(function() {
-    var editor = ace.edit("layout_content");
-    editor.setOptions({
-        maxLines: 25,
-        autoScrollEditorIntoView: true,
-        theme: "ace/theme/monokai",
-        showPrintMargin: false,
-        mode: "ace/mode/html_elixir"
-    });
+    if($("#editor").length) {
+
+        var editor_content = $("#layout_content").val();
+        var editor = ace.edit("editor");
+
+        editor.setValue(editor_content);
+        editor.clearSelection(); // This will remove the highlight over the text
+
+        editor.setOptions({
+            maxLines: 25,
+            autoScrollEditorIntoView: true,
+            theme: "ace/theme/monokai",
+            showPrintMargin: false,
+            mode: "ace/mode/html_elixir"
+        });
+
+        editor.getSession().on('change', function() {
+            var val = editor.getSession().getValue();
+            $("#layout_content").val(val);
+        });
+    }
 })

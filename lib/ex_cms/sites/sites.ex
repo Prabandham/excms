@@ -350,6 +350,7 @@ defmodule ExCms.Sites do
 
   """
   def create_layout(attrs \\ %{}) do
+    IO.inspect(attrs)
     %Layout{}
     |> Layout.changeset(attrs)
     |> Repo.insert()

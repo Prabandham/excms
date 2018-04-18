@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d0a492-490d-4b02-b2b0-a985337d4cc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/_custom.scss" afterPath="$PROJECT_DIR$/assets/css/_custom.scss" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
       <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
       <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/ex_cms/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/" />
@@ -33,12 +28,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="edit.html.eex" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex">
+      <file leaf-file-name="layouts_controller.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="88" lean-forward="false" selection-start-line="1" selection-start-column="88" selection-end-line="1" selection-end-column="88" />
+            <state relative-caret-position="360">
+              <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sites.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/sites.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="352" column="19" lean-forward="false" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
+              <folding>
+                <element signature="e#38#68#0" expanded="false" />
+                <element signature="e#27#6721#1" expanded="false" />
+                <element signature="e#206#306#0" expanded="false" />
+                <element signature="e#324#408#0" expanded="false" />
+                <element signature="e#417#623#0" expanded="false" />
+                <element signature="e#644#731#0" expanded="false" />
+                <element signature="e#740#924#0" expanded="false" />
+                <element signature="e#957#1027#0" expanded="false" />
+                <element signature="e#1036#1236#0" expanded="false" />
+                <element signature="e#1278#1345#0" expanded="false" />
+                <element signature="e#1354#1512#0" expanded="false" />
+                <element signature="e#1547#1577#0" expanded="false" />
+                <element signature="e#1586#1740#0" expanded="false" />
+                <element signature="e#1775#1813#0" expanded="false" />
+                <element signature="e#1851#1951#0" expanded="false" />
+                <element signature="e#1969#2084#0" expanded="false" />
+                <element signature="e#2093#2300#0" expanded="false" />
+                <element signature="e#2390#2574#0" expanded="false" />
+                <element signature="e#2607#2677#0" expanded="false" />
+                <element signature="e#2686#2886#0" expanded="false" />
+                <element signature="e#2928#2995#0" expanded="false" />
+                <element signature="e#3004#3162#0" expanded="false" />
+                <element signature="e#3197#3227#0" expanded="false" />
+                <element signature="e#3236#3391#0" expanded="false" />
+                <element signature="e#3426#3464#0" expanded="false" />
+                <element signature="e#3503#3606#0" expanded="false" />
+                <element signature="e#3625#3688#0" expanded="false" />
+                <element signature="e#3697#3908#0" expanded="false" />
+                <element signature="e#3964#4152#0" expanded="false" />
+                <element signature="e#4186#4258#0" expanded="false" />
+                <element signature="e#4267#4473#0" expanded="false" />
+                <element signature="e#4518#4587#0" expanded="false" />
+                <element signature="e#4596#4760#0" expanded="false" />
+                <element signature="e#4798#4829#0" expanded="false" />
+                <element signature="e#4838#4996#0" expanded="false" />
+                <element signature="e#5034#5074#0" expanded="false" />
+                <element signature="e#5240#5269#0" expanded="false" />
+                <element signature="e#5278#5494#0" expanded="false" />
+                <element signature="e#5552#5744#0" expanded="false" />
+                <element signature="e#5884#6096#0" expanded="false" />
+                <element signature="e#6144#6215#0" expanded="false" />
+                <element signature="e#6224#6394#0" expanded="false" />
+                <element signature="e#6435#6467#0" expanded="false" />
+                <element signature="e#6476#6638#0" expanded="false" />
+                <element signature="e#6679#6721#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.html.eex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +171,6 @@
         <option value="$PROJECT_DIR$/assets/css/_custom.scss" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/from.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/endpoint.ex" />
@@ -109,12 +182,13 @@
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/new.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
       </list>
     </option>
   </component>
@@ -215,7 +289,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="SearchEverywhereHistoryKey" value="app.js&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/js/app.js&#10;app&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex&#10;custom&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/css/_custom.scss&#10;assets&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/controllers/assets_controller.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/router.ex&#10;layout.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/layout.ex&#10;assets_v&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/views/assets_view.ex&#10;end&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/endpoint.ex&#10;_custom&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/css/_custom.scss&#10;sites&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;asset.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;sites.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;ass&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;site.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/site.ex&#10;_cu&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/assets/css/_custom.scss&#10;router&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms_web/router.ex&#10;page.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;la&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/layout.ex&#10;admin&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/accounts/admin.ex&#10;mix&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/mix.exs&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;mix.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/mix.exs&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex" />
+    <property name="SearchEverywhereHistoryKey" value="app.js&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/js/app.js&#10;sites.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;app&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex&#10;custom&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/css/_custom.scss&#10;assets&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/controllers/assets_controller.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/router.ex&#10;layout.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/layout.ex&#10;assets_v&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/views/assets_view.ex&#10;end&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/endpoint.ex&#10;_custom&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/assets/css/_custom.scss&#10;sites&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;asset.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;sites.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/sites.ex&#10;ass&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms/sites/asset.ex&#10;site.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/site.ex&#10;_cu&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/assets/css/_custom.scss&#10;router&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms_web/router.ex&#10;page.ex&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;la&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/layout.ex&#10;admin&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/accounts/admin.ex&#10;mix&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/mix.exs&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Projects/elixir/excms/lib/ex_cms/sites/page.ex&#10;mix.e&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/mix.exs&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/ex_cms/lib/ex_cms_web/templates/layout/app.html.eex" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -416,6 +490,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -528,6 +603,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -570,6 +646,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -594,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/sites.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/views/layout_view.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -612,6 +682,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -633,17 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/Elixir.ExCms.Sites.beam">
-      <provider editor-type-id="BEAM">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -672,36 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -718,6 +752,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="88" lean-forward="false" selection-start-line="1" selection-start-column="88" selection-end-line="1" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/Elixir.ExCms.Sites.beam">
+      <provider editor-type-id="BEAM">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms/sites/sites.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="352" column="19" lean-forward="false" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
+          <folding>
+            <element signature="e#38#68#0" expanded="false" />
+            <element signature="e#27#6721#1" expanded="false" />
+            <element signature="e#206#306#0" expanded="false" />
+            <element signature="e#324#408#0" expanded="false" />
+            <element signature="e#417#623#0" expanded="false" />
+            <element signature="e#644#731#0" expanded="false" />
+            <element signature="e#740#924#0" expanded="false" />
+            <element signature="e#957#1027#0" expanded="false" />
+            <element signature="e#1036#1236#0" expanded="false" />
+            <element signature="e#1278#1345#0" expanded="false" />
+            <element signature="e#1354#1512#0" expanded="false" />
+            <element signature="e#1547#1577#0" expanded="false" />
+            <element signature="e#1586#1740#0" expanded="false" />
+            <element signature="e#1775#1813#0" expanded="false" />
+            <element signature="e#1851#1951#0" expanded="false" />
+            <element signature="e#1969#2084#0" expanded="false" />
+            <element signature="e#2093#2300#0" expanded="false" />
+            <element signature="e#2390#2574#0" expanded="false" />
+            <element signature="e#2607#2677#0" expanded="false" />
+            <element signature="e#2686#2886#0" expanded="false" />
+            <element signature="e#2928#2995#0" expanded="false" />
+            <element signature="e#3004#3162#0" expanded="false" />
+            <element signature="e#3197#3227#0" expanded="false" />
+            <element signature="e#3236#3391#0" expanded="false" />
+            <element signature="e#3426#3464#0" expanded="false" />
+            <element signature="e#3503#3606#0" expanded="false" />
+            <element signature="e#3625#3688#0" expanded="false" />
+            <element signature="e#3697#3908#0" expanded="false" />
+            <element signature="e#3964#4152#0" expanded="false" />
+            <element signature="e#4186#4258#0" expanded="false" />
+            <element signature="e#4267#4473#0" expanded="false" />
+            <element signature="e#4518#4587#0" expanded="false" />
+            <element signature="e#4596#4760#0" expanded="false" />
+            <element signature="e#4798#4829#0" expanded="false" />
+            <element signature="e#4838#4996#0" expanded="false" />
+            <element signature="e#5034#5074#0" expanded="false" />
+            <element signature="e#5240#5269#0" expanded="false" />
+            <element signature="e#5278#5494#0" expanded="false" />
+            <element signature="e#5552#5744#0" expanded="false" />
+            <element signature="e#5884#6096#0" expanded="false" />
+            <element signature="e#6144#6215#0" expanded="false" />
+            <element signature="e#6224#6394#0" expanded="false" />
+            <element signature="e#6435#6467#0" expanded="false" />
+            <element signature="e#6476#6638#0" expanded="false" />
+            <element signature="e#6679#6721#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>

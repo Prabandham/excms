@@ -12,16 +12,17 @@ defmodule ExCmsWeb.LayoutsController do
     render(conn, "new.html", changeset: changeset, sites: sites)
   end
 
-  def create(conn, %{ "layout" => layouts_params}) do
-    case ExCms.Sites.create_layout(layouts_params) do
-      {ok, layout} ->
+  def create(conn, %{ "layout" => layout_params}) do
+    case ExCms.Sites.create_layout(layout_params) do
+      {:ok, layout} ->
         conn
         |> put_flash(:info, "Successfuly created Layout")
         |> redirect(to: layouts_path(conn, :index))
       {:error, changeset} ->
+        sites = ExCms.Sites.list_sites()
         conn
         |> put_flash(:alert, "Please check the erros below.")
-        |> render("new.html", changeset: changeset)
+        |> render("new.html", changeset: changeset, sites: sites)
     end
   end
 
