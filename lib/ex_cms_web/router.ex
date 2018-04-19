@@ -13,17 +13,23 @@ defmodule ExCmsWeb.Router do
     plug(:accepts, ["json"])
   end
 
-  scope "/", ExCmsWeb do
-    # Use the default browser stack
+  scope "/cms", ExCmsWeb do
     pipe_through(:browser)
 
-    get("/", PageController, :index)
-    get("/home", DashboardController, :index)
+    get("/", DashboardController, :index)
 
     resources("/sites", SitesController)
     resources("/assets", AssetsController)
     resources("/layouts", LayoutsController)
     resources("/pages", PagesController)
+  end
+
+  scope "/", ExCmsWeb do
+    # Use the default browser stack
+    pipe_through(:browser)
+
+    get("/", PageController, :index)
+    get("/:page", PageController, :index)
   end
 
   # Other scopes may use custom stacks.

@@ -1,3 +1,4 @@
+<!--
 <div class='text-center'>
     <form class="form-signin">
           <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -15,3 +16,5 @@
           <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
 </div>
+-->
+<%= raw(@content) %>

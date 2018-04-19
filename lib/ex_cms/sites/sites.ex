@@ -45,6 +45,15 @@ defmodule ExCms.Sites do
   end
 
   @doc """
+  Returns the site based on the domain name
+"""
+  def get_site_by_domain(name) do
+    Site
+    |> Repo.get_by(domain_name: name)
+    |> Repo.preload([:pages, :assets, :layouts])
+  end
+
+  @doc """
   Creates a site.
 
   ## Examples
