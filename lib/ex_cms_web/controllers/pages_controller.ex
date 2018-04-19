@@ -33,7 +33,9 @@ defmodule ExCmsWeb.PagesController do
   def show(conn, %{"id" => id}) do
     page = ExCms.Sites.get_page!(id)
     content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
-    render(conn, "show.html", content: content)
+    conn
+    |> put_layout(:false)
+    |> render("show.html", content: content)
   end
 
   def edit(conn, %{"id" => id}) do

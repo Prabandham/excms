@@ -7,7 +7,6 @@ defmodule ExCmsWeb.PageController do
     host = conn.host
     site = ExCms.Sites.get_site_by_domain(host)
     [page] = site.pages |> Enum.filter(fn(p) -> p.name == page end)
-    IO.inspect(page)
     content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
     render(conn, "index.html", content: content)
   end
@@ -18,5 +17,4 @@ defmodule ExCmsWeb.PageController do
     content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
     render(conn, "index.html", content: content)
   end
-
 end
