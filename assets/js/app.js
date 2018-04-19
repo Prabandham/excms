@@ -19,7 +19,7 @@ import "./pushy.min"
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-// import socket from "./socket"
+import socket from "./socket"
 
 $(document).ready(function() {
     if($("#editor").length) {
@@ -62,7 +62,16 @@ $(document).ready(function() {
 
         page_editor.getSession().on('change', function() {
             var val = page_editor.getSession().getValue();
+            var site_id = $("#page_site_id").val();
+            var layout_id = $("#page_layout_id").val();
+            var title = $("#page_title").val();
+            page_channel.push("show_preview", {data: val, site_id: site_id, layout_id: layout_id, title: title})
             $("#page_content").val(val);
         });
     }
+
+    $("#toggle-page-inputs").on('click', function(e) {
+        e.preventDefault();
+        $("#common-page-inputs").toggleClass('d-none');
+    });
 })

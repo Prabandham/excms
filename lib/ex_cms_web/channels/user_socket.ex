@@ -2,7 +2,7 @@ defmodule ExCmsWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", ExCmsWeb.RoomChannel
+  channel "pages:preview", ExCmsWeb.PagesChannel
 
   ## Transports
   transport(:websocket, Phoenix.Transports.WebSocket)

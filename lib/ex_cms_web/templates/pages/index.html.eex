@@ -22,6 +22,7 @@
                 <td><%= page.is_active %></td>
                 <td><%= page.title %></td>
                 <td>
+                    <%= link("Preview", to: pages_path(@conn, :show, page.id), class: "btn btn-sm btn-info", target: "_blank") %>
                     <%= link("Edit", to: pages_path(@conn, :edit, page.id), class: "btn btn-sm btn-warning") %>
                     <%= link("Delete", to: pages_path(@conn, :delete, page.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-danger") %>
                 </td>

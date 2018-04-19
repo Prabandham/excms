@@ -1,0 +1,1 @@
+<iframe class="full-screen-preview" srcdoc="<%= @content %>"></iframe>

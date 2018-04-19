@@ -54,8 +54,13 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 socket.connect()
 
 // Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("topic:subtopic", {})
-channel.join()
+window.page_channel = socket.channel("pages:preview", {})
+
+page_channel.on("preview_data", payload => {
+    $("#preview-div").attr("srcdoc", payload.data)
+})
+
+page_channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })
 

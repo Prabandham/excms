@@ -13,6 +13,7 @@ defmodule ExCms.Sites.Site do
     field(:is_active, :boolean, default: false)
     field(:meta, :map, default: %{})
     field(:name, :string)
+    field(:root_page, :string)
 
     has_many(:layouts, Layout)
     has_many(:assets, Asset)
@@ -24,7 +25,7 @@ defmodule ExCms.Sites.Site do
   @doc false
   def changeset(site, attrs) do
     site
-    |> cast(attrs, [:name, :is_active, :domain_name, :description, :meta, :google_analytics_key])
+    |> cast(attrs, [:name, :is_active, :domain_name, :description, :meta, :google_analytics_key, :root_page])
     |> validate_required([:name, :is_active, :domain_name, :description])
     |> unique_constraint(:name)
     |> unique_constraint(:domain_name)

@@ -10,7 +10,8 @@ defmodule ExCmsWeb.PagesController do
     changeset = ExCms.Sites.change_page(%ExCms.Sites.Page{})
     sites = ExCms.Sites.list_sites()
     layouts = ExCms.Sites.list_layouts()
-    render(conn,"new.html", changeset: changeset, sites: sites, layouts: layouts)
+    page = %ExCms.Sites.Page{}
+    render(conn,"new.html", changeset: changeset, sites: sites, layouts: layouts, page: page)
   end
 
   def create(conn, %{"page" => pages_params}) do
@@ -27,6 +28,12 @@ defmodule ExCmsWeb.PagesController do
         |> put_flash(:error, "Please correct the errors below")
         |> render("new.html", changeset: changeset, sites: sites, layouts: layouts)
     end
+  end
+
+  def show(conn, %{"id" => id}) do
+    page = ExCms.Sites.get_page!(id)
+    content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
+    render(conn, "show.html", content: content)
   end
 
   def edit(conn, %{"id" => id}) do
