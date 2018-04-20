@@ -20,7 +20,7 @@ defmodule ExCms.Mixfile do
   def application do
     [
       mod: {ExCms.Application, []},
-      extra_applications: [:logger, :runtime_tools, :liquid]
+      extra_applications: [:logger, :runtime_tools, :liquid, :con_cache]
     ]
   end
 
@@ -42,7 +42,8 @@ defmodule ExCms.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:earmark, "~> 1.2"},
-      {:liquid, "~> 0.8.0"}
+      {:liquid, "~> 0.8.0"},
+      {:con_cache, "~> 0.12.1"}
     ]
   end
 
