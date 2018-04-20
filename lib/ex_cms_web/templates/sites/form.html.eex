@@ -1,0 +1,40 @@
+<%= form_for @changeset, @action, fn f -> %>
+    <div class="form-group">
+        <label>Name</label>
+        <%= text_input f, :name, class: "form-control" %>
+        <%= error_tag(f, :name_for_site) %>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <%= textarea f, :description, class: "form-control" %>
+        <%= error_tag(f, :description) %>
+    </div>
+
+    <div class="form-group">
+        <label>Domain Name</label>
+        <%= text_input f, :domain_name, class: "form-control" %>
+        <%= error_tag(f, :domain_name) %>
+    </div>
+
+    <div class="form-group">
+        <label>Google Analytics Key</label>
+        <%= text_input f, :google_analytics_key, class: "form-control" %>
+        <%= error_tag(f, :google_analytics_key) %>
+    </div>
+
+    <div class="form-group">
+        <label>Is Active</label>
+        <%= checkbox f, :is_active %>
+    </div>
+
+    <div class="form-group">
+        <label>Root Page</label>
+        <%= select f, :root_page, Enum.map(@pages, &{&1.name, &1.name}), prompt: "Choose Root Page", class: "form-control" %>
+        <%= error_tag(f, :site_id) %>
+    </div>
+
+    <div class="form-group">
+      <%= submit "Submit", class: "btn btn-primary" %>
+    </div>
+<% end %>
