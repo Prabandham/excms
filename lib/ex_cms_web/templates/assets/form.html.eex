@@ -18,6 +18,12 @@
     </div>
 
     <div class="form-group">
+        <label>Priority</label>
+        <%= number_input f, :priority, class: "from-control" %>
+        <%= error_tag(f, :priority) %>
+    </div>
+
+    <div class="form-group">
       <%= submit "Submit", class: "btn btn-primary" %>
     </div>
 <% end %>

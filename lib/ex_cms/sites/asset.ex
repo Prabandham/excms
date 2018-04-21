@@ -9,6 +9,7 @@ defmodule ExCms.Sites.Asset do
   schema "assets" do
     field(:content, :string)
     field(:name, :string)
+    field(:priority, :integer, default: 1)
 
     belongs_to(:site, Site)
 
@@ -18,7 +19,7 @@ defmodule ExCms.Sites.Asset do
   @doc false
   def changeset(asset, attrs) do
     asset
-    |> cast(attrs, [:name, :content, :site_id])
+    |> cast(attrs, [:name, :content, :site_id, :priority])
     |> validate_required([:name, :content, :site_id])
     |> unique_constraint(:name_for_site, name: :name_for_site_assets)
   end

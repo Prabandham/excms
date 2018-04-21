@@ -229,6 +229,7 @@ defmodule ExCms.Sites do
   """
   def list_assets do
     Asset
+    |> Ecto.Query.order_by([a], [desc: a.priority])
     |> Repo.all()
     |> Repo.preload(:site)
   end

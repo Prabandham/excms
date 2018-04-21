@@ -9,7 +9,7 @@ defmodule ExCms.Utils.BuildPage do
   def render(page_content, site_id, layout_id, title) do
     site = ExCms.Sites.get_site!(site_id)
     layout = ExCms.Sites.get_layout!(layout_id)
-    assets = site.assets # |> Enum.sort_by(fn a -> a.updated_at end) TODO provide an order for the user to load them
+    assets = site.assets |> Enum.sort_by(fn a -> a.priority end) |> Enum.reverse()
 
     EEx.eval_string(
       layout.content,
