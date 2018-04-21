@@ -11,7 +11,7 @@ defmodule ExCmsWeb.PagesController do
     sites = ExCms.Sites.list_sites()
     layouts = ExCms.Sites.list_layouts()
     page = %ExCms.Sites.Page{}
-    render(conn,"new.html", changeset: changeset, sites: sites, layouts: layouts, page: page)
+    render(conn, "new.html", changeset: changeset, sites: sites, layouts: layouts, page: page)
   end
 
   def create(conn, %{"page" => pages_params}) do
@@ -24,6 +24,7 @@ defmodule ExCmsWeb.PagesController do
       {:error, changeset} ->
         sites = ExCms.Sites.list_sites()
         layouts = ExCms.Sites.list_layouts()
+
         conn
         |> put_flash(:error, "Please correct the errors below")
         |> render("new.html", changeset: changeset, sites: sites, layouts: layouts)
@@ -33,8 +34,9 @@ defmodule ExCmsWeb.PagesController do
   def show(conn, %{"id" => id}) do
     page = ExCms.Sites.get_page!(id)
     content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
+
     conn
-    |> put_layout(:false)
+    |> put_layout(false)
     |> render("show.html", content: content)
   end
 
@@ -52,12 +54,16 @@ defmodule ExCmsWeb.PagesController do
     case ExCms.Sites.update_page(page, pages_params) do
       {:ok, page} ->
         page = page |> ExCms.Repo.preload(:site)
-        cache_key = if(page.name == page.site.root_page) do
-          page.site.domain_name <> "/"
-        else
-          page.site.domain_name <> "/" <> page.name
-        end
+
+        cache_key =
+          if(page.name == page.site.root_page) do
+            page.site.domain_name <> "/"
+          else
+            page.site.domain_name <> "/" <> page.name
+          end
+
         ConCache.delete(:page_cache, cache_key)
+
         conn
         |> put_flash(:info, "Page updated Successfully")
         |> redirect(to: pages_path(conn, :index))
@@ -65,6 +71,7 @@ defmodule ExCmsWeb.PagesController do
       {:error, changeset} ->
         sites = ExCms.Sites.list_sites()
         layouts = ExCms.Sites.list_layouts()
+
         conn
         |> put_flash(:error, "Please check the errors below")
         |> render("edit.html", changeset: changeset, sites: sites, page: page, layouts: layouts)

@@ -45,8 +45,8 @@ defmodule ExCms.Sites do
   end
 
   @doc """
-  Returns the site based on the domain name
-"""
+    Returns the site based on the domain name
+  """
   def get_site_by_domain(name) do
     Site
     |> Repo.get_by(domain_name: name)
@@ -330,13 +330,13 @@ defmodule ExCms.Sites do
   end
 
   @doc """
-  Returns the list of layouts for the given site
+    Returns the list of layouts for the given site
 
-  ## Examples
+    ## Examples
 
-  iex> list_layouts(site.id)
-  [%Layout{}, ...]
-"""
+    iex> list_layouts(site.id)
+    [%Layout{}, ...]
+  """
 
   def list_layouts(site_id) do
     site = get_site!(site_id)

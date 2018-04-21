@@ -1,18 +1,22 @@
 defmodule ExCmsWeb.PageController do
   use ExCmsWeb, :controller
 
-  plug :put_layout, false
+  plug(:put_layout, false)
 
   def index(conn, %{"page" => page}) do
     host = conn.host
     cache_key = host <> conn.request_path
     content = ConCache.get(:page_cache, cache_key)
+
     if(content != nil) do
       render(conn, "index.html", content: content)
     else
       site = ExCms.Sites.get_site_by_domain(host)
-      [page] = site.pages |> Enum.filter(fn(p) -> p.name == page end)
-      content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
+      [page] = site.pages |> Enum.filter(fn p -> p.name == page end)
+
+      content =
+        ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
+
       cache_key = host <> page.name
       ConCache.put(:page_cache, cache_key, content)
       render(conn, "index.html", content: content)
@@ -24,12 +28,16 @@ defmodule ExCmsWeb.PageController do
     host = conn.host
     cache_key = host <> conn.request_path
     content = ConCache.get(:page_cache, cache_key)
+
     if(content != nil) do
       render(conn, "index.html", content: content)
     else
       site = ExCms.Sites.get_site_by_domain(host)
-      [page] = site.pages |> Enum.filter(fn(p) -> p.name == site.root_page end)
-      content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
+      [page] = site.pages |> Enum.filter(fn p -> p.name == site.root_page end)
+
+      content =
+        ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
+
       cache_key = host <> conn.request_path
       ConCache.put(:page_cache, cache_key, content)
       render(conn, "index.html", content: content)

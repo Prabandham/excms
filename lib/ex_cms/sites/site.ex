@@ -25,7 +25,15 @@ defmodule ExCms.Sites.Site do
   @doc false
   def changeset(site, attrs) do
     site
-    |> cast(attrs, [:name, :is_active, :domain_name, :description, :meta, :google_analytics_key, :root_page])
+    |> cast(attrs, [
+      :name,
+      :is_active,
+      :domain_name,
+      :description,
+      :meta,
+      :google_analytics_key,
+      :root_page
+    ])
     |> validate_required([:name, :is_active, :domain_name, :description])
     |> unique_constraint(:name)
     |> unique_constraint(:domain_name)
