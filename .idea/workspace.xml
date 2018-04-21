@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d0a492-490d-4b02-b2b0-a985337d4cc2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/asset.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/asset.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" afterPath="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex" afterPath="$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/ex_cms/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/ex_cms/ebin/" />
@@ -29,18 +26,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page_controller.ex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_controller.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+            <state relative-caret-position="420">
+              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding>
-                <element signature="e#39#1401#1" expanded="false" />
-                <element signature="e#429#448#1" expanded="false" />
-                <element signature="e#797#1401#0" expanded="false" />
-                <element signature="e#938#1395#0" expanded="false" />
-                <element signature="e#1095#1124#1" expanded="false" />
+                <element signature="e#39#997#1" expanded="false" />
+                <element signature="e#245#264#1" expanded="false" />
+                <element signature="e#709#738#1" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom-847b86ee-8839-496d-beae-6ce7ee21bf6c.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cms_assets/custom-847b86ee-8839-496d-beae-6ce7ee21bf6c.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assets_controller.ex" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/parallax-template/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +108,6 @@
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/edit.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/edit.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/layouts_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/page/new.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/page/form.html.eex" />
@@ -103,7 +127,6 @@
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/pages/show.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/layout/app.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/application.ex" />
-        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/pages_controller.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/sites/new.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/sites/form.html.eex" />
@@ -117,6 +140,8 @@
         <option value="$PROJECT_DIR$/lib/ex_cms_web/templates/assets/form.html.eex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/sites/sites.ex" />
         <option value="$PROJECT_DIR$/lib/ex_cms/utils/build_page.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex" />
+        <option value="$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
       </list>
     </option>
   </component>
@@ -287,7 +312,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18515626" sideWeight="0.4945504" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38671875" sideWeight="0.4945504" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -332,7 +357,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/views/layouts_view.ex" />
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/views/layout_view.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -359,7 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex" />
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/index.html.eex" />
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/new.html.eex" />
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/templates/layouts/form.html.eex" />
@@ -492,13 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/parallax-template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -646,17 +662,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/parallax-template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/page_controller.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+        <state relative-caret-position="420">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
-            <element signature="e#39#1401#1" expanded="false" />
-            <element signature="e#429#448#1" expanded="false" />
-            <element signature="e#797#1401#0" expanded="false" />
-            <element signature="e#938#1395#0" expanded="false" />
-            <element signature="e#1095#1124#1" expanded="false" />
+            <element signature="e#39#997#1" expanded="false" />
+            <element signature="e#245#264#1" expanded="false" />
+            <element signature="e#709#738#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cms_assets/custom-847b86ee-8839-496d-beae-6ce7ee21bf6c.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ex_cms_web/controllers/assets_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

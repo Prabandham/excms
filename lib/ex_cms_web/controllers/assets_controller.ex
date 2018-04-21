@@ -61,6 +61,10 @@ defmodule ExCmsWeb.AssetsController do
 
     case ExCms.Sites.update_asset(asset, assets_params) do
       {:ok, asset} ->
+        File.cp(
+          upload.path,
+          "./cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
+        )
         conn
         |> put_flash(:info, "Successfuly updated asset")
         |> redirect(to: assets_path(conn, :index))
