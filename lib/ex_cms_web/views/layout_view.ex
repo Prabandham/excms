@@ -6,7 +6,7 @@ defmodule ExCmsWeb.LayoutView do
   This helper function will help us decide if the page is one of those pages were we do not want to render the navbar
   """
   def should_show_nav_bar?(conn) do
-    excluded_paths = ["/", "/login"]
+    excluded_paths = ["/", "/cms/login"]
     !Enum.member?(excluded_paths, conn.request_path)
   end
 end
