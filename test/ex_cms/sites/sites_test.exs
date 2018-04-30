@@ -141,7 +141,9 @@ defmodule ExCms.SitesTest do
 
     test "list_assets/0 returns all assets" do
       asset = asset_fixture()
-      assert Sites.list_assets() == [asset]
+      assets = Sites.list_assets()
+      [a | _] = assets
+      assert [a.content] == [asset.content]
     end
 
     test "get_asset!/1 returns the asset with given id" do

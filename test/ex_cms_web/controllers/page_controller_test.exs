@@ -3,6 +3,6 @@ defmodule ExCmsWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")
-    assert html_response(conn, 200) =~ "Please sign in"
+    assert html_response(conn, 200) =~ "No Site found"
   end
 end
