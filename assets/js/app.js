@@ -70,8 +70,27 @@ $(document).ready(function() {
         });
     }
 
+    if($("#help_editor").length) {
+
+        var page_editor_content = $("#help_content").val();
+        var page_editor = ace.edit("help_editor");
+
+        page_editor.setOptions({
+            maxLines: 25,
+            autoScrollEditorIntoView: true,
+            theme: "ace/theme/monokai",
+            showPrintMargin: false,
+            mode: "ace/mode/html_elixir"
+        });
+    }
+
     $("#toggle-page-inputs").on('click', function(e) {
         e.preventDefault();
         $("#common-page-inputs").toggleClass('d-none');
+    });
+
+    $("#toggle-layout-inputs").on('click', function(e) {
+        e.preventDefault();
+        $("#common-layout-inputs").toggleClass('d-none');
     });
 })
