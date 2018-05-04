@@ -3,7 +3,7 @@
         <h4>Listing Pages</h4>
      </div>
      <div class="col col-xs-6">
-        <%= link("New Page", to: pages_path(@conn, :new), class: "btn btn-outline btn-primary float-right") %>
+        <%= link("New Page", to: pages_path(@conn, :new), class: "btn btn-outline-primary float-right") %>
      </div>
 </div>
 <hr />
@@ -22,9 +22,9 @@
                 <td><%= page.is_active %></td>
                 <td><%= page.title %></td>
                 <td>
-                    <%= link("Preview", to: pages_path(@conn, :show, page.id), class: "btn btn-sm btn-info", target: "_blank") %>
-                    <%= link("Edit", to: pages_path(@conn, :edit, page.id), class: "btn btn-sm btn-warning") %>
-                    <%= link("Delete", to: pages_path(@conn, :delete, page.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-danger") %>
+                    <%= link("Preview", to: pages_path(@conn, :show, page.id), class: "btn btn-sm btn-outline-info", target: "_blank") %>
+                    <%= link("Edit", to: pages_path(@conn, :edit, page.id), class: "btn btn-sm btn-outline-warning") %>
+                    <%= link("Delete", to: pages_path(@conn, :delete, page.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-outline-danger") %>
                 </td>
             </tr>
         <% end %>

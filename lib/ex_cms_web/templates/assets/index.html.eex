@@ -3,7 +3,7 @@
         <h4>Listing Assets</h4>
      </div>
      <div class="col col-xs-6">
-        <%= link("New Asset", to: assets_path(@conn, :new), class: "btn btn-outline btn-primary float-right") %>
+        <%= link("New Asset", to: assets_path(@conn, :new), class: "btn btn-outline-primary float-right") %>
      </div>
 </div>
 <hr />
@@ -22,8 +22,8 @@
                 <td><%= asset.site.name %></td>
                 <td><%= get_type(asset) %></td>
                 <td>
-                    <%= link("Edit", to: assets_path(@conn, :edit, asset.id), class: "btn btn-sm btn-warning") %>
-                    <%= link("Delete", to: assets_path(@conn, :delete, asset.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-danger") %>
+                    <%= link("Edit", to: assets_path(@conn, :edit, asset.id), class: "btn btn-outline-warning btn-sm") %>
+                    <%= link("Delete", to: assets_path(@conn, :delete, asset.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-outline-danger btn-sm") %>
                 </td>
             </tr>
         <% end %>
