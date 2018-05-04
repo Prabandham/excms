@@ -1,7 +1,7 @@
 <%= form_for @changeset, @action, [multipart: true], fn f -> %>
     <div class="form-group">
         <label>Name</label>
-        <%= text_input f, :name, class: "from-control" %>
+        <%= text_input f, :name, class: "form-control" %>
         <%= error_tag(f, :name_for_site) %>
     </div>
 
@@ -19,7 +19,8 @@
 
     <div class="form-group">
         <label>Priority</label>
-        <%= number_input f, :priority, class: "from-control" %>
+        <small class="text-muted"><i>(Assets with higher priority will be appended to the page first)</i></small>
+        <%= number_input f, :priority, class: "form-control" %>
         <%= error_tag(f, :priority) %>
     </div>
 

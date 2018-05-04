@@ -11,7 +11,6 @@
 <table class="table">
     <thead>
         <th>Name</th>
-        <th>Path</th>
         <th>Site Name</th>
         <th>Asset Type</th>
         <th>Actions</th>
@@ -20,7 +19,6 @@
         <%= for asset <- @assets do %>
             <tr>
                 <td><%= asset.name %></td>
-                <td><%= asset.content %></td>
                 <td><%= asset.site.name %></td>
                 <td><%= get_type(asset) %></td>
                 <td>
