@@ -9,7 +9,7 @@ defmodule ExCmsWeb.AssetsController do
 
   def new(conn, _params) do
     changeset = ExCms.Sites.change_asset(%ExCms.Sites.Asset{})
-    sites = ExCms.Sites.list_sites()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
     render(conn, "new.html", changeset: changeset, sites: sites)
   end
 
@@ -45,7 +45,7 @@ defmodule ExCmsWeb.AssetsController do
   def edit(conn, %{"id" => id}) do
     asset = ExCms.Sites.get_asset!(id)
     changeset = ExCms.Sites.change_asset(asset)
-    sites = ExCms.Sites.list_sites()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
     render(conn, "edit.html", changeset: changeset, sites: sites, asset: asset)
   end
 

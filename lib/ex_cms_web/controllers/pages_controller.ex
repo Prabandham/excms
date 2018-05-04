@@ -9,8 +9,8 @@ defmodule ExCmsWeb.PagesController do
 
   def new(conn, _params) do
     changeset = ExCms.Sites.change_page(%ExCms.Sites.Page{})
-    sites = ExCms.Sites.list_sites()
-    layouts = ExCms.Sites.list_layouts()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
+    layouts = ExCms.Sites.list_layouts(conn.host)
     page = %ExCms.Sites.Page{}
     render(conn, "new.html", changeset: changeset, sites: sites, layouts: layouts, page: page)
   end
@@ -44,8 +44,8 @@ defmodule ExCmsWeb.PagesController do
   def edit(conn, %{"id" => id}) do
     page = ExCms.Sites.get_page!(id)
     changeset = ExCms.Sites.change_page(page)
-    sites = ExCms.Sites.list_sites()
-    layouts = ExCms.Sites.list_layouts()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
+    layouts = ExCms.Sites.list_layouts(conn.host)
     render(conn, "edit.html", changeset: changeset, sites: sites, layouts: layouts, page: page)
   end
 

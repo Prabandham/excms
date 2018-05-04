@@ -21,7 +21,7 @@ defmodule ExCmsWeb.LayoutsController do
         |> redirect(to: layouts_path(conn, :index))
 
       {:error, changeset} ->
-        sites = ExCms.Sites.list_sites()
+        sites = [ExCms.Sites.get_site_by_domain(conn.host)]
 
         conn
         |> put_flash(:alert, "Please check the erros below.")
@@ -32,7 +32,7 @@ defmodule ExCmsWeb.LayoutsController do
   def edit(conn, %{"id" => id}) do
     layout = ExCms.Sites.get_layout!(id)
     changeset = ExCms.Sites.change_layout(layout)
-    sites = ExCms.Sites.list_sites()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
     render(conn, "edit.html", changeset: changeset, sites: sites, lay: layout)
   end
 
