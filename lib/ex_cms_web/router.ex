@@ -35,6 +35,7 @@ defmodule ExCmsWeb.Router do
     get("/", PageController, :index)
     get("/cms/login", SessionsController, :new)
     get("/:page", PageController, :index)
+    post("/validate", SessionsController, :validate)
   end
 
   # Other scopes may use custom stacks.

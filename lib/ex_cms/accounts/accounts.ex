@@ -37,6 +37,11 @@ defmodule ExCms.Accounts do
   """
   def get_admin!(id), do: Repo.get!(Admin, id)
 
+  def get_admin_by_email(email) do
+    Admin
+    |> Repo.get_by(email: email)
+  end
+
   @doc """
   Creates a admin.
 

@@ -14,8 +14,11 @@ defmodule ExCms.Accounts.Auth do
 
     %{:error, _} = ExCms.Accounts.Auth.is_valid?("invalid_email", "invalid_password")
   """
-  def is_valid?(login, password) do
-    # TODO
+  def is_valid?(email, password) do
+    case ExCms.Accounts.get_admin_by_email(email) do
+      nil ->  {false, nil}
+      user -> {true, generate_login_token(user)}
+    end
   end
 
   @doc """
@@ -30,10 +33,15 @@ defmodule ExCms.Accounts.Auth do
     %{:error, _} = ExCms.Accounts.Auth.is_valid?("Invalid Token")
   """
   def is_valid?(token) do
-    # TODO
+    # TODO lookup in concache first to prevent DB queries every time this is fired.
+    case ExCms.Accounts.get_admin!(token) do
+      nil -> false
+      _ -> true
+    end
   end
 
-  def generate_login_token(admin) do
+  defp generate_login_token(admin) do
+    #TODO set this in con cache as well.
     admin.id
   end
 end
