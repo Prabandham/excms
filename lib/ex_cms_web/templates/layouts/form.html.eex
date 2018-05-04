@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-12" id="layout-div">
+    <div class="col-xs-12" id="layout_div">
         <%= form_for @changeset, @action, fn f -> %>
             <div id="common-layout-inputs">
                 <div class="form-group">
