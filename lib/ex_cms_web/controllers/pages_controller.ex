@@ -2,7 +2,8 @@ defmodule ExCmsWeb.PagesController do
   use ExCmsWeb, :controller
 
   def index(conn, _params) do
-    pages = ExCms.Sites.list_pages()
+    host = conn.host
+    pages = ExCms.Sites.list_pages(host)
     render(conn, "index.html", pages: pages)
   end
 

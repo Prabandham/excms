@@ -2,7 +2,8 @@ defmodule ExCmsWeb.AssetsController do
   use ExCmsWeb, :controller
 
   def index(conn, _params) do
-    assets = ExCms.Sites.list_assets()
+    host = conn.host
+    assets = ExCms.Sites.list_assets(host)
     render(conn, "index.html", assets: assets)
   end
 

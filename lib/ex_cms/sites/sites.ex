@@ -135,6 +135,16 @@ defmodule ExCms.Sites do
     |> Repo.preload([:site, :layout])
   end
 
+  def list_pages(host) do
+    site = get_site_by_domain(host)
+    case site do
+      nil -> []
+      _ ->
+        site.pages
+        |> Repo.preload([:site, :layout])
+    end
+  end
+
   @doc """
   Gets a single page.
 
@@ -234,6 +244,16 @@ defmodule ExCms.Sites do
     |> Repo.preload(:site)
   end
 
+  def list_assets(name) do
+    site = get_site_by_domain(name)
+    case site do
+      nil -> []
+      _ ->
+        site.assets
+        |> Repo.preload(:site)
+    end
+  end
+
   @doc """
   Gets a single asset.
 
@@ -328,6 +348,15 @@ defmodule ExCms.Sites do
   """
   def list_layouts do
     Repo.all(Layout)
+  end
+
+  def list_layouts(name) do
+    site = get_site_by_domain(name)
+    case site do
+      nil -> []
+      _ ->
+        site.layouts
+    end
   end
 
   @doc """

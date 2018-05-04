@@ -2,7 +2,8 @@ defmodule ExCmsWeb.LayoutsController do
   use ExCmsWeb, :controller
 
   def index(conn, _params) do
-    layouts = ExCms.Sites.list_layouts()
+    host = conn.host
+    layouts = ExCms.Sites.list_layouts(host)
     render(conn, "index.html", layouts: layouts)
   end
 
