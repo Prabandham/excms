@@ -69,7 +69,7 @@ defmodule ExCms.Accounts do
   """
   def update_admin(%Admin{} = admin, attrs) do
     admin
-    |> Admin.changeset(attrs)
+    |> Admin.update_changeset(attrs)
     |> Repo.update()
   end
 

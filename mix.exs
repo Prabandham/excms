@@ -43,7 +43,9 @@ defmodule ExCms.Mixfile do
       {:cowboy, "~> 1.0"},
       {:earmark, "~> 1.2"},
       {:liquid, "~> 0.8.0"},
-      {:con_cache, "~> 0.12.1"}
+      {:con_cache, "~> 0.12.1"},
+      {:comeonin, "~> 4.0"},
+      {:argon2_elixir, "~> 1.2"}
     ]
   end
 

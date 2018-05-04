@@ -9,12 +9,16 @@ defmodule ExCmsWeb.Router do
     plug(:put_secure_browser_headers)
   end
 
+  pipeline :cms do
+    plug ExCmsWeb.Plugs.AuthenticateUser
+  end
+
   pipeline :api do
     plug(:accepts, ["json"])
   end
 
   scope "/cms", ExCmsWeb do
-    pipe_through(:browser)
+    pipe_through [:browser, :cms]
 
     get("/", DashboardController, :index)
 
@@ -29,6 +33,7 @@ defmodule ExCmsWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
+    get("/cms/login", SessionsController, :new)
     get("/:page", PageController, :index)
   end
 
