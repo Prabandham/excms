@@ -16,7 +16,7 @@ defmodule ExCms.Accounts.Auth do
   """
   def is_valid?(email, password) do
     case ExCms.Accounts.get_admin_by_email(email) do
-      nil ->  {false, nil}
+      nil -> {false, nil}
       user -> {true, generate_login_token(user)}
     end
   end
@@ -41,7 +41,7 @@ defmodule ExCms.Accounts.Auth do
   end
 
   defp generate_login_token(admin) do
-    #TODO set this in con cache as well.
+    # TODO set this in con cache as well.
     admin.id
   end
 end

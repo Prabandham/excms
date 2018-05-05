@@ -18,6 +18,7 @@ defmodule ExCmsWeb.SitesController do
       {:ok, site} ->
         conn
         |> put_flash(:info, "Site created successfully")
+        # TODO rediect to the correct domain so that we can start working on it.
         |> redirect(to: sites_path(conn, :index))
 
       {:error, changeset} ->
@@ -43,11 +44,13 @@ defmodule ExCmsWeb.SitesController do
 
   def update(conn, %{"id" => id, "site" => sites_params}) do
     site = ExCms.Sites.get_site!(id)
+
     case ExCms.Sites.update_site(site, sites_params) do
       {:ok, site} ->
         conn
         |> put_flash(:info, "Site upadted successfully")
         |> redirect(to: sites_path(conn, :index))
+
       {:error, changeset} ->
         pages = site.pages
 

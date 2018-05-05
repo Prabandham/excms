@@ -11,6 +11,7 @@ defmodule ExCmsWeb.SessionsController do
         conn
         |> put_session(:user_id, user_id)
         |> redirect(to: dashboard_path(conn, :index))
+
       {false, nil} ->
         conn
         |> put_flash(:error, "Invalid Credentials")

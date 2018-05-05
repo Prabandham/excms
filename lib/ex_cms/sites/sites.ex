@@ -137,8 +137,11 @@ defmodule ExCms.Sites do
 
   def list_pages(host) do
     site = get_site_by_domain(host)
+
     case site do
-      nil -> []
+      nil ->
+        []
+
       _ ->
         site.pages
         |> Repo.preload([:site, :layout])
@@ -239,15 +242,18 @@ defmodule ExCms.Sites do
   """
   def list_assets do
     Asset
-    |> Ecto.Query.order_by([a], [desc: a.priority])
+    |> Ecto.Query.order_by([a], desc: a.priority)
     |> Repo.all()
     |> Repo.preload(:site)
   end
 
   def list_assets(name) do
     site = get_site_by_domain(name)
+
     case site do
-      nil -> []
+      nil ->
+        []
+
       _ ->
         site.assets
         |> Repo.preload(:site)
@@ -352,8 +358,11 @@ defmodule ExCms.Sites do
 
   def list_layouts(name) do
     site = get_site_by_domain(name)
+
     case site do
-      nil -> []
+      nil ->
+        []
+
       _ ->
         site.layouts
     end

@@ -28,7 +28,7 @@ defmodule ExCms.Accounts.Admin do
   def update_changeset(admin, attrs) do
     admin
     |> cast(attrs, [:email, :password, :full_name, :is_active, :attributes])
-    |> validate_required([:email,  :full_name, :is_active, :attributes])
+    |> validate_required([:email, :full_name, :is_active, :attributes])
     |> validate_format(:email, ~r/^[A-Za-z0-9._%+-+']+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
     |> unique_constraint(:email)
     |> hash_password()
@@ -37,5 +37,6 @@ defmodule ExCms.Accounts.Admin do
   defp hash_password(%Ecto.Changeset{valid?: true, changes: %{password: password}} = changeset) do
     change(changeset, Comeonin.Argon2.add_hash(password))
   end
+
   defp hash_password(changeset), do: changeset
 end

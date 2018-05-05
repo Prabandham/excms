@@ -14,9 +14,12 @@ defmodule ExCmsWeb.Plugs.AuthenticateUser do
         |> put_flash(:error, "You need to sign in first !!")
         |> redirect(to: Helpers.sessions_path(conn, :new))
         |> halt()
+
       key ->
         case ExCms.Accounts.Auth.is_valid?(key) do
-          true -> conn
+          true ->
+            conn
+
           false ->
             conn
             |> put_flash(:error, "Invalid Session !!")

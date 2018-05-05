@@ -6,11 +6,15 @@ defmodule ExCmsWeb.PageController do
   def index(conn, %{"page" => page}) do
     host = conn.host
     site = ExCms.Sites.get_site_by_domain(host)
+
     case site do
-      nil -> render(conn, "no_site.html")
+      nil ->
+        render(conn, "no_site.html")
+
       _ ->
-        [page] = site.pages
-                 |> Enum.filter(fn p -> p.name == page end)
+        [page] =
+          site.pages
+          |> Enum.filter(fn p -> p.name == page end)
 
         content =
           ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
@@ -25,11 +29,15 @@ defmodule ExCmsWeb.PageController do
   def index(conn, _params) do
     host = conn.host
     site = ExCms.Sites.get_site_by_domain(host)
+
     case site do
-      nil -> render(conn, "no_site.html")
+      nil ->
+        render(conn, "no_site.html")
+
       _ ->
-        [page] = site.pages
-                 |> Enum.filter(fn p -> p.name == site.root_page end)
+        [page] =
+          site.pages
+          |> Enum.filter(fn p -> p.name == site.root_page end)
 
         content =
           ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)

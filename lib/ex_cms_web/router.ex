@@ -10,7 +10,7 @@ defmodule ExCmsWeb.Router do
   end
 
   pipeline :cms do
-    plug ExCmsWeb.Plugs.AuthenticateUser
+    plug(ExCmsWeb.Plugs.AuthenticateUser)
   end
 
   pipeline :api do
@@ -18,7 +18,7 @@ defmodule ExCmsWeb.Router do
   end
 
   scope "/cms", ExCmsWeb do
-    pipe_through [:browser, :cms]
+    pipe_through([:browser, :cms])
 
     get("/", DashboardController, :index)
 
