@@ -74,7 +74,7 @@ exports.config = {
         $: 'jquery',
         jQuery: 'jquery',
         Tether: 'tether',
-        bootstrap: 'bootstrap'
+        bootstrap: 'bootstrap',
     }
   }
 };

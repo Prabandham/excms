@@ -22,6 +22,7 @@
                 <td><%= asset.site.name %></td>
                 <td><%= get_type(asset) %></td>
                 <td>
+                    <button class="'btn btn-outline-success btn-sm copy-btn" data-clipboard-text="<%= asset.content %>" title="Copied to Clipboard" id="<%= asset.id %>">Copy Path</button>
                     <%= link("Edit", to: assets_path(@conn, :edit, asset.id), class: "btn btn-outline-warning btn-sm") %>
                     <%= link("Delete", to: assets_path(@conn, :delete, asset.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-outline-danger btn-sm") %>
                 </td>

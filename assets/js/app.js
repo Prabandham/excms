@@ -13,7 +13,7 @@
 // to also remove its path from "config.paths.watched".
 import "phoenix_html"
 import "./pushy.min"
-
+import "./clipboard.min"
 // Import local files
 //
 // Local files can be imported directly using relative
@@ -93,4 +93,18 @@ $(document).ready(function() {
         e.preventDefault();
         $("#common-layout-inputs").toggleClass('d-none');
     });
+
+    // Clipboard to copy asset path.
+    var clipboard = new Clipboard(".copy-btn");
+    clipboard.on('success', function(e) {
+        var element = $(e.trigger);
+        $(element).tooltip('show');
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+
 })
