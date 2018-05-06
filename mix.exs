@@ -33,7 +33,7 @@ defmodule ExCms.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0"},
+      {:phoenix, "~> 1.3.0", override: true},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
@@ -45,7 +45,9 @@ defmodule ExCms.Mixfile do
       {:liquid, "~> 0.8.0"},
       {:con_cache, "~> 0.12.1"},
       {:comeonin, "~> 4.0"},
-      {:argon2_elixir, "~> 1.2"}
+      {:argon2_elixir, "~> 1.2"},
+      {:rummage_ecto, "~> 1.2.0"},
+      {:rummage_phoenix, "~> 1.2.0"}
     ]
   end
 
