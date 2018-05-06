@@ -20,7 +20,7 @@ defmodule ExCms.Mixfile do
   def application do
     [
       mod: {ExCms.Application, []},
-      extra_applications: [:logger, :runtime_tools, :liquid, :con_cache]
+      extra_applications: [:logger, :runtime_tools, :liquid, :con_cache, :scrivener_ecto, :scrivener_html]
     ]
   end
 
@@ -46,8 +46,9 @@ defmodule ExCms.Mixfile do
       {:con_cache, "~> 0.12.1"},
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
-      {:rummage_ecto, "~> 1.2.0"},
-      {:rummage_phoenix, "~> 1.2.0"}
+      {:scrivener_ecto, "~> 1.0"},
+      {:scrivener_html, "~> 1.7"},
+      {:scrivener_list, "~> 1.0"}
     ]
   end
 

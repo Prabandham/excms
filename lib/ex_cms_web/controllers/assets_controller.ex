@@ -1,10 +1,11 @@
 defmodule ExCmsWeb.AssetsController do
   use ExCmsWeb, :controller
 
-  def index(conn, _params) do
+  def index(conn, params) do
     host = conn.host
     assets = ExCms.Sites.list_assets(host)
-    render(conn, "index.html", assets: assets)
+    page = assets |> ExCms.Repo.paginate(params)
+    render(conn, "index.html", page: page)
   end
 
   def new(conn, _params) do

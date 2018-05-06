@@ -16,7 +16,7 @@
         <th>Actions</th>
     </thead>
     <tbody>
-        <%= for asset <- @assets do %>
+        <%= for asset <- @page do %>
             <tr>
                 <td><%= asset.name %></td>
                 <td><%= asset.site.name %></td>
@@ -30,3 +30,8 @@
         <% end %>
     </tbody>
 </table>
+
+<div class="row h-100 justify-content-center align-items-center">
+    <%= pagination_links @page %>
+</div>
+

@@ -1,5 +1,6 @@
 defmodule ExCmsWeb.AssetsView do
   use ExCmsWeb, :view
+  import Scrivener.HTML
 
   def get_type(asset) do
     list = String.split(asset.content, ".")
