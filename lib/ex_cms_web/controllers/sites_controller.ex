@@ -1,6 +1,7 @@
 defmodule ExCmsWeb.SitesController do
   use ExCmsWeb, :controller
   alias ExCms.Sites
+  alias ExCms.Utils.PageCache
 
   def index(conn, _params) do
     sites = Sites.list_sites()
@@ -8,21 +9,20 @@ defmodule ExCmsWeb.SitesController do
   end
 
   def new(conn, _params) do
-    changeset = ExCms.Sites.change_site(%ExCms.Sites.Site{})
-    pages = [%ExCms.Sites.Page{}]
+    changeset = Sites.change_site(%Sites.Site{})
+    pages = [%Sites.Page{}]
     render(conn, "new.html", changeset: changeset, pages: pages)
   end
 
   def create(conn, %{"site" => sites_params}) do
-    case ExCms.Sites.create_site(sites_params) do
+    case Sites.create_site(sites_params) do
       {:ok, site} ->
         conn
         |> put_flash(:info, "Site created successfully")
-        # TODO rediect to the correct domain so that we can start working on it.
         |> redirect(to: sites_path(conn, :index))
 
       {:error, changeset} ->
-        pages = [%ExCms.Sites.Page{}]
+        pages = [%Sites.Page{}]
 
         conn
         |> put_flash(:error, "Please correct the errors below")
@@ -36,17 +36,18 @@ defmodule ExCmsWeb.SitesController do
   end
 
   def edit(conn, %{"id" => id}) do
-    site = ExCms.Sites.get_site!(id)
-    changeset = ExCms.Sites.change_site(site)
+    site = Sites.get_site!(id)
+    changeset = Sites.change_site(site)
     pages = site.pages
     render(conn, "edit.html", pages: pages, site: site, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "site" => sites_params}) do
-    site = ExCms.Sites.get_site!(id)
+    site = Sites.get_site!(id)
 
-    case ExCms.Sites.update_site(site, sites_params) do
+    case Sites.update_site(site, sites_params) do
       {:ok, site} ->
+        PageCache.expire_cache(site.id)
         conn
         |> put_flash(:info, "Site upadted successfully")
         |> redirect(to: sites_path(conn, :index))

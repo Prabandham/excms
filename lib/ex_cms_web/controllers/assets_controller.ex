@@ -33,7 +33,7 @@ defmodule ExCmsWeb.AssetsController do
               upload.path,
               "./cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
             )
-
+            ExCms.Utils.PageCache.expire_cache(asset.site_id)
             redirect(conn, to: assets_path(conn, :index))
           end
 
@@ -68,6 +68,8 @@ defmodule ExCmsWeb.AssetsController do
           "./cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
         )
 
+        ExCms.Utils.PageCache.expire_cache(asset.site_id)
+
         conn
         |> put_flash(:info, "Successfuly updated asset")
         |> redirect(to: assets_path(conn, :index))
@@ -86,9 +88,10 @@ defmodule ExCmsWeb.AssetsController do
 
     case ExCms.Repo.delete(asset) do
       {:ok, struct} ->
-        # TODO also check if this was successful
         path = "." <> asset.content
         File.rm(path)
+
+        ExCms.Utils.PageCache.expire_cache(asset.site_id)
 
         conn
         |> put_flash(:info, "Asset successfully deleted !")

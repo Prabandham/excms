@@ -12,7 +12,7 @@
     </div>
 
     <div class="form-group">
-        <label>Content</label>
+        <label>Site</label>
         <%= select f, :site_id, Enum.map(@sites, &{&1.name, &1.id}), prompt: "Choose Site", class: "form-control" %>
         <%= error_tag(f, :site_id) %>
     </div>

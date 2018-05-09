@@ -5,7 +5,6 @@ defmodule ExCms.Utils.PageCache do
 
   @cache_table :page_cache
 
-
   @doc """
   Tries to get a site's map from the cache else does a db look up to see if the given domain is present
 
@@ -55,7 +54,6 @@ defmodule ExCms.Utils.PageCache do
     case site do
       nil ->
         {:ok, site} = get_site_from_cache(domain_name)
-        IO.inspect(page_name)
         [page] = site.pages |> Enum.filter(fn p -> p.name == page_name end)
         content = ExCms.Utils.BuildPage.render(page.content, page.site_id, page.layout_id, page.title)
          set_page_cache(domain_name, page_name, content)

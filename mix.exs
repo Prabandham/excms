@@ -48,7 +48,8 @@ defmodule ExCms.Mixfile do
       {:argon2_elixir, "~> 1.2"},
       {:scrivener_ecto, "~> 1.0"},
       {:scrivener_html, "~> 1.7"},
-      {:scrivener_list, "~> 1.0"}
+      {:scrivener_list, "~> 1.0"},
+      {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false}
     ]
   end
 

@@ -7,8 +7,12 @@ defmodule ExCmsWeb.PageController do
     case ExCms.Utils.PageCache.get_site_from_cache(conn.host) do
       {:error, %{}} -> render(conn, "no_site.html")
       {:ok, site} ->
-        content = ExCms.Utils.PageCache.get_page_from_cache(conn.host, page)
-        render(conn, "index.html", content: content)
+        try do
+          content = ExCms.Utils.PageCache.get_page_from_cache(conn.host, page)
+          render(conn, "index.html", content: content)
+        rescue
+          MatchError -> render(conn, "404.html")
+        end
     end
   end
 
@@ -17,8 +21,12 @@ defmodule ExCmsWeb.PageController do
     case ExCms.Utils.PageCache.get_site_from_cache(conn.host) do
       {:error, %{}} -> render(conn, "no_site.html")
       {:ok, site} ->
-        content = ExCms.Utils.PageCache.get_page_from_cache(conn.host, site.root_page)
-        render(conn, "index.html", content: content)
+        try do
+          content = ExCms.Utils.PageCache.get_page_from_cache(conn.host, site.root_page)
+          render(conn, "index.html", content: content)
+        rescue
+          ArgumentError -> render(conn, "404.html")
+        end
     end
   end
 end

@@ -24,7 +24,10 @@ defmodule ExCms.Utils.BuildPage do
     styles =
       assets
       |> Enum.map(fn asset ->
-        if(String.split(asset.content, ".") |> List.last() == "css") do
+        array = String.split(asset.content, ".")
+        kind = array
+               |> List.last()
+        if(kind == "css") do
           "<link rel='stylesheet' href='http://localhost:4000#{asset.content}'>"
         end
       end)
@@ -36,7 +39,10 @@ defmodule ExCms.Utils.BuildPage do
     js =
       assets
       |> Enum.map(fn asset ->
-        if(String.split(asset.content, ".") |> List.last() == "js") do
+        array = String.split(asset.content, ".")
+        kind = array
+               |> List.last()
+        if(kind == "js") do
           "<script src='http://localhost:4000#{asset.content}'></script>"
         end
       end)

@@ -54,17 +54,7 @@ defmodule ExCmsWeb.PagesController do
 
     case ExCms.Sites.update_page(page, pages_params) do
       {:ok, page} ->
-        page = page |> ExCms.Repo.preload(:site)
-
-        cache_key =
-          if(page.name == page.site.root_page) do
-            page.site.domain_name <> "/"
-          else
-            page.site.domain_name <> "/" <> page.name
-          end
-
-        ConCache.delete(:page_cache, cache_key)
-
+        ExCms.Utils.PageCache.expire_cache(page.site_id)
         conn
         |> put_flash(:info, "Page updated Successfully")
         |> redirect(to: pages_path(conn, :index))
