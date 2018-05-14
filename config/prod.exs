@@ -62,4 +62,16 @@ config :phoenix, :serve_endpoints, true
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
+
+config :ex_cms, ExCmsWeb.Endpoint,
+       secret_key_base: "MUJ4r0EHKHteNSsyTCFjXQOE0JG/7ap25FmNHsdCHjeJip2DA2YNnt4DiLNTy5XH"
+
+# Configure your database
+config :ex_cms, ExCms.Repo,
+       adapter: Ecto.Adapters.Postgres,
+       username: "postgres",
+       password: "postgres",
+       database: "ex_cms_prod",
+       hostname: "localhost",
+       pool_size: 20
