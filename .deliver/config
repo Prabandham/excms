@@ -1,7 +1,7 @@
 APP="ex_cms"
 
 BUILD_HOST="51.15.245.243"
-BUILD_USER="root"
+BUILD_USER="builder"
 BUILD_AT="/tmp/edeliver/$APP/builds"
 
 RELEASE_DIR="/tmp/edeliver/$APP/builds/_build/prod/rel/$APP"
