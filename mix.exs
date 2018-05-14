@@ -49,7 +49,9 @@ defmodule ExCms.Mixfile do
       {:scrivener_ecto, "~> 1.0"},
       {:scrivener_html, "~> 1.7"},
       {:scrivener_list, "~> 1.0"},
-      {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false}
+      {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false},
+      {:edeliver, "~> 1.4.2"},
+      {:distillery, "~> 1.4"}
     ]
   end
 
