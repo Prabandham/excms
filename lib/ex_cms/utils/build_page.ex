@@ -15,8 +15,8 @@ defmodule ExCms.Utils.BuildPage do
       layout.content,
       title: title,
       content: page_content,
-      include_stylesheets: include_stylesheets(site.domain, assets),
-      include_javascripts: include_javascripts(site.domain, assets)
+      include_stylesheets: include_stylesheets(site.domain_name, assets),
+      include_javascripts: include_javascripts(site.domain_name, assets)
     )
   end
 
