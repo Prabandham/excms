@@ -18,7 +18,7 @@ defmodule ExCmsWeb.Endpoint do
   plug(
     Plug.Static,
     at: "/cms_assets",
-    from: Path.expand("./cms_assets"),
+    from: Application.get_env(:ex_cms, :full_upload_path),
     gzip: true
   )
 
