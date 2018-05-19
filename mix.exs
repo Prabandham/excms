@@ -4,7 +4,7 @@ defmodule ExCms.Mixfile do
   def project do
     [
       app: :ex_cms,
-      version: "0.0.3",
+      version: "0.0.4",
       elixir: "~> 1.6.4",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -50,6 +50,10 @@ defmodule ExCms.Mixfile do
       {:scrivener_html, "~> 1.7"},
       {:scrivener_list, "~> 1.0"},
       {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false},
+      {:ex_aws, "~> 1.0"},
+      {:poison, "~> 2.0"},
+      {:hackney, "~> 1.6"},
+      {:uuid, "~> 1.1" },
       {:edeliver, "~> 1.4.2"},
       {:distillery, "~> 1.4"}
     ]

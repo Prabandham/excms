@@ -64,6 +64,9 @@ config :phoenix, :serve_endpoints, true
 # which should be versioned separately.
 # import_config "prod.secret.exs"
 
+config :ex_cms,
+       full_upload_path: "/home/deploy/ex_cms/cms_uploads"
+
 config :ex_cms, ExCmsWeb.Endpoint,
        check_origin: false,
        secret_key_base: "MUJ4r0EHKHteNSsyTCFjXQOE0JG/7ap25FmNHsdCHjeJip2DA2YNnt4DiLNTy5XH"

@@ -10,6 +10,16 @@ config :ex_cms,
   ecto_repos: [ExCms.Repo],
   generators: [binary_id: true]
 
+# Configure EX_Aws
+config :ex_aws,
+  access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),
+  secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
+  s3: [
+    scheme: "https://",
+    host: "cms-assets-larks.s3.amazonaws.com",
+    region: "Asia Pacific (Tokyo)"
+  ]
+
 # Configures the endpoint
 config :ex_cms, ExCmsWeb.Endpoint,
   url: [host: "localhost"],
