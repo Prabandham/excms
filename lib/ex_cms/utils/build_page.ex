@@ -43,7 +43,7 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "js") do
-          "<script src='http://#{domain}/#{asset.content}'></script>"
+          "<script src='http://#{domain}/#{asset.content}'></script>'"
         end
       end)
 
