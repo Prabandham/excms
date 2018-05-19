@@ -15,12 +15,12 @@ defmodule ExCms.Utils.BuildPage do
       layout.content,
       title: title,
       content: page_content,
-      include_stylesheets: include_stylesheets(assets),
-      include_javascripts: include_javascripts(assets)
+      include_stylesheets: include_stylesheets(site.domain, assets),
+      include_javascripts: include_javascripts(site.domain, assets)
     )
   end
 
-  def include_stylesheets(assets) do
+  def include_stylesheets(domain, assets) do
     styles =
       assets
       |> Enum.map(fn asset ->
@@ -28,14 +28,14 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "css") do
-          "<link rel='stylesheet' href='http://localhost:4000#{asset.content}'>"
+          "<link rel='stylesheet' href='http://#{domain}/#{asset.content}'>"
         end
       end)
 
     Enum.join(styles, "\n")
   end
 
-  def include_javascripts(assets) do
+  def include_javascripts(domain, assets) do
     js =
       assets
       |> Enum.map(fn asset ->
@@ -43,7 +43,7 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "js") do
-          "<script src='http://localhost:4000#{asset.content}'></script>"
+          "<script src='http://#{domain}/#{asset.content}'></script>"
         end
       end)
 
