@@ -65,7 +65,7 @@ config :phoenix, :serve_endpoints, true
 # import_config "prod.secret.exs"
 
 config :ex_cms,
-       full_upload_path: "/home/deploy/ex_cms/cms_uploads"
+       full_upload_path: "/home/deploy/ex_cms/cms_assets"
 
 config :ex_cms, ExCmsWeb.Endpoint,
        check_origin: false,
