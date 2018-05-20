@@ -8,7 +8,7 @@ defmodule ExCmsWeb.LayoutsController do
   end
 
   def new(conn, _params) do
-    sites = ExCms.Sites.list_sites()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
     changeset = ExCms.Sites.change_layout(%ExCms.Sites.Layout{})
     render(conn, "new.html", changeset: changeset, sites: sites)
   end
