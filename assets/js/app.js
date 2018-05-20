@@ -84,6 +84,25 @@ $(document).ready(function() {
         });
     }
 
+    if($("#new_page").length) {
+        $("#page_site_id").val($("#page_site_id option:eq(1)").val());
+        $("#page_layout_id").val($("#page_layout_id option:eq(1)").val());
+    }
+
+    if($("#new_asset").length) {
+        $("#asset_site_id").val($("#asset_site_id option:eq(1)").val());
+    }
+
+    if($("#new_layout").length) {
+        $("#layout_site_id").val($("#layout_site_id option:eq(1)").val());
+    }
+
+    // On file select set the name automatically
+    $("input:file").change(function (){
+         var fileName = $(this)[0].files[0]['name'];
+         $("#asset_name").val(fileName);
+    });
+
     $("#toggle-page-inputs").on('click', function(e) {
         e.preventDefault();
         $("#common-page-inputs").toggleClass('d-none');
