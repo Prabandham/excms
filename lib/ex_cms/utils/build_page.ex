@@ -28,7 +28,7 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "css") do
-          if(Mix.env == :dev) do
+          if(Application.get_env(:ex_cms, :environment) == "dev") do
             "<link rel='stylesheet' href='http://localhost:4000#{asset.content}'>"
           else
             "<link rel='stylesheet' href='http://#{domain}#{asset.content}'>"
@@ -47,7 +47,7 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "js") do
-          if(Mix.env == :dev) do
+          if(Application.get_env(:ex_cms, :environment) == "dev") do
             "<script src='http://localhost:4000#{asset.content}'></script>'"
           else
             "<script src='http://#{domain}#{asset.content}'></script>'"

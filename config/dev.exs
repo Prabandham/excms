@@ -51,7 +51,8 @@ config :ex_cms, ExCmsWeb.Endpoint,
 config :logger, :console, format: "[$level] $message\n"
 
 config :ex_cms,
-       full_upload_path: "./cms_assets"
+       full_upload_path: "./cms_assets",
+       environment: "dev"
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
