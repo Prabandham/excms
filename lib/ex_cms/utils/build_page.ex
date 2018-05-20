@@ -28,7 +28,11 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "css") do
-          "<link rel='stylesheet' href='http://#{domain}/#{asset.content}'>"
+          if(Mix.env == :dev) do
+            "<link rel='stylesheet' href='http://localhost:4000#{asset.content}'>"
+          else
+            "<link rel='stylesheet' href='http://#{domain}#{asset.content}'>"
+          end
         end
       end)
 
@@ -43,7 +47,11 @@ defmodule ExCms.Utils.BuildPage do
         kind = array
                |> List.last()
         if(kind == "js") do
-          "<script src='http://#{domain}/#{asset.content}'></script>'"
+          if(Mix.env == :dev) do
+            "<script src='http://localhost:4000#{asset.content}'></script>'"
+          else
+            "<script src='http://#{domain}#{asset.content}'></script>'"
+          end
         end
       end)
 
