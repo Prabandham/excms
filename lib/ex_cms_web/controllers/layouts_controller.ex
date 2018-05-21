@@ -8,7 +8,7 @@ defmodule ExCmsWeb.LayoutsController do
   end
 
   def new(conn, _params) do
-    sites = ExCms.Sites.list_sites()
+    sites = [ExCms.Sites.get_site_by_domain(conn.host)]
     changeset = ExCms.Sites.change_layout(%ExCms.Sites.Layout{})
     render(conn, "new.html", changeset: changeset, sites: sites)
   end
@@ -41,6 +41,7 @@ defmodule ExCmsWeb.LayoutsController do
 
     case ExCms.Sites.update_layout(layout, layout_params) do
       {:ok, layout} ->
+        ExCms.Utils.PageCache.expire_cache(layout.site_id)
         conn
         |> put_flash(:info, "Layout updated Successfully")
         |> redirect(to: layouts_path(conn, :index))
@@ -55,10 +56,11 @@ defmodule ExCmsWeb.LayoutsController do
   end
 
   def delete(conn, %{"id" => id}) do
-    asset = ExCms.Sites.get_layout!(id)
+    layout = ExCms.Sites.get_layout!(id)
 
-    case ExCms.Repo.delete(asset) do
+    case ExCms.Repo.delete(layout) do
       {:ok, struct} ->
+        ExCms.Utils.PageCache.expire_cache(layout.site_id)
         conn
         |> put_flash(:info, "Layout successfully deleted !")
         |> redirect(to: layouts_path(conn, :index))

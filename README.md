@@ -66,7 +66,50 @@ Can we use this?
     COMING SOON
 
 ### Deployment
-    COMING SOON
+
+    Deployment is done using distillery and edeliver.
+
+    We use the same server to do the build and deploy.
+
+    each with a seperate user.
+    So deploy will happen on the remote server with user builder
+    and code will be deployed under user deploy.
+
+    Initial deploy :-
+
+        # Build the code on remote build host.
+        mix edeliver build release production
+
+        # Deploy the code to production.
+        mix edeliver deploy release to production
+
+        # Start server.
+        mix edeliver start production
+
+    Code upgrades :-
+
+        # Set current version
+        mix edeliver version production
+
+        # Build the upgrade
+        mix edeliver build upgrade production --verbose --with=version_number
+
+        # Deploy the upgarade to production
+        mix edeliver deploy upgrade to production
+
+    Seeds :-
+        If you have to run any seeds on the production machine like admin user.
+
+        ssh to the production Node and cd to the $APP directory.
+        bin/$APP remote_console
+
+        This will put us in an iex shell. From where we can run commands to create / delete user.
+
+    # Nginx config :- TODO
+
+    # Backups :- TODO
+
+    # SSL setup :- TODO
 
 ### Contributing
     NOT ACCEPTING ANY PR's YET :(

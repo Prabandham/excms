@@ -9,3 +9,6 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+admin_user_params = %{ email: "srinidhi@larks.in", password: "R1d1cu!0u$", full_name: "Srinidhi Prabandham", is_active: true, attributes: %{}}
+ExCms.Accounts.create_admin(admin_user_params)

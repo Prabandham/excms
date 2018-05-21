@@ -33,7 +33,6 @@ defmodule ExCms.Accounts.Auth do
     %{:error, _} = ExCms.Accounts.Auth.is_valid?("Invalid Token")
   """
   def is_valid?(token) do
-    # TODO lookup in concache first to prevent DB queries every time this is fired.
     case ExCms.Accounts.get_admin!(token) do
       nil -> false
       _ -> true

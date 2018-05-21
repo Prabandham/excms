@@ -18,7 +18,7 @@ defmodule ExCmsWeb.Endpoint do
   plug(
     Plug.Static,
     at: "/cms_assets",
-    from: Path.expand("./cms_assets"),
+    from: Application.get_env(:ex_cms, :full_upload_path),
     gzip: true
   )
 
@@ -63,7 +63,7 @@ defmodule ExCmsWeb.Endpoint do
   """
   def init(_key, config) do
     if config[:load_from_system_env] do
-      port = System.get_env("PORT") || raise "expected the PORT environment variable to be set"
+      port = System.get_env("PORT") || "4000"
       {:ok, Keyword.put(config, :http, [:inet6, port: port])}
     else
       {:ok, config}

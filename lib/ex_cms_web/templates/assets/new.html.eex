@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="new_asset">
     <div class="col col-xs-6">
         <h4>Create new Asset</h4>
     </div>
