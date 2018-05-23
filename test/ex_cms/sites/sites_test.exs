@@ -249,4 +249,64 @@ defmodule ExCms.SitesTest do
       assert %Ecto.Changeset{} = Sites.change_layout(layout)
     end
   end
+
+  describe "contract_messages" do
+    alias ExCms.Sites.Contact
+
+    @valid_attrs %{values: %{}}
+    @update_attrs %{values: %{}}
+    @invalid_attrs %{values: nil}
+
+    def contact_fixture(attrs \\ %{}) do
+      {:ok, contact} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Sites.create_contact()
+
+      contact
+    end
+
+    test "list_contract_messages/0 returns all contract_messages" do
+      contact = contact_fixture()
+      assert Sites.list_contract_messages() == [contact]
+    end
+
+    test "get_contact!/1 returns the contact with given id" do
+      contact = contact_fixture()
+      assert Sites.get_contact!(contact.id) == contact
+    end
+
+    test "create_contact/1 with valid data creates a contact" do
+      assert {:ok, %Contact{} = contact} = Sites.create_contact(@valid_attrs)
+      assert contact.values == %{}
+    end
+
+    test "create_contact/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Sites.create_contact(@invalid_attrs)
+    end
+
+    test "update_contact/2 with valid data updates the contact" do
+      contact = contact_fixture()
+      assert {:ok, contact} = Sites.update_contact(contact, @update_attrs)
+      assert %Contact{} = contact
+      assert contact.values == %{}
+    end
+
+    test "update_contact/2 with invalid data returns error changeset" do
+      contact = contact_fixture()
+      assert {:error, %Ecto.Changeset{}} = Sites.update_contact(contact, @invalid_attrs)
+      assert contact == Sites.get_contact!(contact.id)
+    end
+
+    test "delete_contact/1 deletes the contact" do
+      contact = contact_fixture()
+      assert {:ok, %Contact{}} = Sites.delete_contact(contact)
+      assert_raise Ecto.NoResultsError, fn -> Sites.get_contact!(contact.id) end
+    end
+
+    test "change_contact/1 returns a contact changeset" do
+      contact = contact_fixture()
+      assert %Ecto.Changeset{} = Sites.change_contact(contact)
+    end
+  end
 end
