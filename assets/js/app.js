@@ -22,6 +22,10 @@ import "./clipboard.min"
 import socket from "./socket"
 
 $(document).ready(function() {
+    $(".nav-link").on("click", function() {
+        console.log($(this));
+    });
+
     if($("#editor").length) {
 
         var editor_content = $("#layout_content").val();

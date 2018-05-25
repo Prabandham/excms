@@ -13,24 +13,31 @@
 
   <body>
     <%= if(should_show_nav_bar?(@conn)) do %>
-        <nav class="pushy pushy-left">
-            <div class="pushy-content">
-                <ul>
-                    <li class="pushy-link"><a href="/cms/sites">Sites</a></li>
-                    <li class="pushy-link"><a href="/cms/assets">Assets</a></li>
-                    <li class="pushy-link"><a href="/cms/layouts">Layouts</a></li>
-                    <li class="pushy-link"><a href="/cms/pages">Pages</a></li>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <a class="navbar-brand" href="/cms">ExCms</a>
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cms/sites">Sites<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cms/assets">Assets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cms/layouts/">Layouts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cms/pages/">Pages</a>
+                  </li>
                 </ul>
-            </div>
-        </nav>
+              </div>
+            </nav>
     <% end %>
 
-    <div class="site-overlay"></div>
-
-    <div class="container" id="container">
-        <%= if(should_show_nav_bar?(@conn)) do %>
-            <h4 class="menu-btn">&#9776; ExCms</h4>
-        <% end  %>
+    <div class="container-fluid">
         <%= if(get_flash(@conn, :info)) do %>
           <p class="alert alert-info text-center" role="alert"><%= get_flash(@conn, :info) %></p>
         <% end %>
@@ -38,7 +45,7 @@
           <p class="alert alert-danger text-center" role="alert"><%= get_flash(@conn, :error) %></p>
         <% end %>
 
-      <main role="main">
+      <main role="main" class="container-fluid">
         <%= render @view_module, @view_template, assigns %>
       </main>
     </div> <!-- /container -->
