@@ -1,30 +1,32 @@
-<%= form_for @changeset, @action, [multipart: true], fn f -> %>
-    <div class="form-group">
-        <label>Content</label>
-        <%= file_input f, :content, class: "form-control" %>
-        <%= error_tag(f, :content) %>
-    </div>
+<div class="col">
+    <%= form_for @changeset, @action, [multipart: true], fn f -> %>
+        <div class="form-group">
+            <label>Content</label>
+            <%= file_input f, :content, class: "form-control" %>
+            <%= error_tag(f, :content) %>
+        </div>
 
-    <div class="form-group">
-        <label>Name</label>
-        <%= text_input f, :name, class: "form-control" %>
-        <%= error_tag(f, :name_for_site) %>
-    </div>
+        <div class="form-group">
+            <label>Name</label>
+            <%= text_input f, :name, class: "form-control" %>
+            <%= error_tag(f, :name_for_site) %>
+        </div>
 
-    <div class="form-group">
-        <label>Site</label>
-        <%= select f, :site_id, Enum.map(@sites, &{&1.name, &1.id}), prompt: "Choose Site", class: "form-control" %>
-        <%= error_tag(f, :site_id) %>
-    </div>
+        <div class="form-group">
+            <label>Site</label>
+            <%= select f, :site_id, Enum.map(@sites, &{&1.name, &1.id}), prompt: "Choose Site", class: "form-control" %>
+            <%= error_tag(f, :site_id) %>
+        </div>
 
-    <div class="form-group">
-        <label>Priority</label>
-        <small class="text-muted"><i>(Assets with higher priority will be appended to the page first)</i></small>
-        <%= number_input f, :priority, class: "form-control" %>
-        <%= error_tag(f, :priority) %>
-    </div>
+        <div class="form-group">
+            <label>Priority</label>
+            <small class="text-muted"><i>(Assets with higher priority will be appended to the page first)</i></small>
+            <%= number_input f, :priority, class: "form-control" %>
+            <%= error_tag(f, :priority) %>
+        </div>
 
-    <div class="form-group">
-      <%= submit "Submit", class: "btn btn-primary" %>
-    </div>
-<% end %>
+        <div class="form-group">
+          <%= submit "Submit", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+</div>

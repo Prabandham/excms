@@ -3,35 +3,31 @@
         <h4>Listing Sites</h4>
      </div>
      <div class="col col-xs-6">
-        <%= link("New Site", to: sites_path(@conn, :new), class: "btn btn-outline-primary float-right") %>
+        <%= link("New Site", to: sites_path(@conn, :new), class: "btn btn-success float-right") %>
      </div>
 </div>
 <hr />
-<div class="container">
-    <div class="row">
-        <table class="table">
-            <thead class="">
-                <th>Name</th>
-                <th>Domain Name</th>
-                <th>Is Active</th>
-                <th>GA Key</th>
-                <th>Actions</th>
-            </thead>
-            <tbody>
-                <%= for site <- @sites do %>
-                    <tr>
-                        <td><%= site.name %></td>
-                        <td><%= site.domain_name %></td>
-                        <td><%= site.is_active %></td>
-                        <td><%= site.google_analytics_key %></td>
-                        <td>
-                            <%= link("Show", to: sites_path(@conn, :show, site.id), class: "btn btn-sm btn-outline-primary") %>
-                            <%= link("Edit", to: sites_path(@conn, :edit, site.id), class: "btn btn-sm btn-outline-warning") %>
-                            <%= link("Delete", to: sites_path(@conn, :delete, site.id), class: "btn btn-sm btn-outline-danger") %>
-                        </td>
-                    </tr>
-                <% end %>
-            </tbody>
-        </table>
-    </div>
-</div>
+<table class="table table-dark table-condensed">
+    <thead>
+        <th>Name</th>
+        <th>Domain Name</th>
+        <th>Is Active</th>
+        <th>GA Key</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <%= for site <- @sites do %>
+            <tr>
+                <td><%= site.name %></td>
+                <td><%= site.domain_name %></td>
+                <td><%= site.is_active %></td>
+                <td><%= site.google_analytics_key %></td>
+                <td>
+                    <%= link("Show", to: sites_path(@conn, :show, site.id), class: "btn btn-sm btn-success") %>
+                    <%= link("Edit", to: sites_path(@conn, :edit, site.id), class: "btn btn-sm btn-warning") %>
+                    <%= link("Delete", to: sites_path(@conn, :delete, site.id), class: "btn btn-sm btn-danger") %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
