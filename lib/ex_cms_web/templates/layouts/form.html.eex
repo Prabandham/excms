@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-12" id="layout_div">
+    <div class="col" id="layout_div">
         <%= form_for @changeset, @action, fn f -> %>
             <div id="common-layout-inputs">
                 <div class="form-group">
@@ -25,8 +25,6 @@
 
             <div class="form-group">
               <%= submit "Submit", class: "btn btn-primary" %>
-
-              <%= link("Back", to: layouts_path(@conn, :index), class: "btn btn-info float-right") %>
             </div>
         <% end %>
     </div>

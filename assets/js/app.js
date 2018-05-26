@@ -14,6 +14,7 @@
 import "phoenix_html"
 import "./pushy.min"
 import "./clipboard.min"
+import "./jquery-resizable"
 // Import local files
 //
 // Local files can be imported directly using relative
@@ -24,6 +25,20 @@ import socket from "./socket"
 $(document).ready(function() {
     $(".nav-link").on("click", function() {
         console.log($(this));
+    });
+
+    $(".panel-left").resizable({
+        handleSelector: ".splitter",
+        resizeHeight: false,
+        onDrag: function(e, el, newWidth, newHeight, opt) {
+            var bodyWidth = $("body").width();
+            var mixWidth = bodyWidth - 680;
+            console.log(mixWidth);
+            console.log(newWidth);
+            if(newWidth >= mixWidth) {
+                return false;
+            }
+        }
     });
 
     if($("#editor").length) {
@@ -129,5 +144,20 @@ $(document).ready(function() {
         console.error('Action:', e.action);
         console.error('Trigger:', e.trigger);
     });
+
+    // Resize iframe
+    $(function () {
+        setIFrameSize();
+        $(window).resize(function () {
+            setIFrameSize();
+        });
+    });
+
+    function setIFrameSize() {
+        var parentDivWidth = $("#previewframe").parent().width();
+        var parentDivHeight = $("#previewframe").parent().height();
+        $("#previewframe")[0].setAttribute("width", parentDivWidth);
+        $("#previewframe")[0].setAttribute("height", parentDivHeight);
+    }
 
 })

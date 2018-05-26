@@ -1,3 +1,12 @@
+<div class="row">
+    <div class="col col-xs-6">
+        <h4>Create Layout</h4>
+    </div>
+    <div class="col col-xs-6">
+        <%= link("Back", to: layouts_path(@conn, :index), class: "btn btn-info float-right") %>
+    </div>
+</div>
+ <hr />
  <div class="row" id="new_layout">
     <%= render "form.html", Map.put(assigns, :action , layouts_path(@conn, :create)) %>
 </div>

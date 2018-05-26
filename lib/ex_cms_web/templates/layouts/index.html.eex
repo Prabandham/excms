@@ -3,12 +3,12 @@
         <h4>Listing Layouts</h4>
      </div>
      <div class="col col-xs-6">
-        <%= link("New Layout", to: layouts_path(@conn, :new), class: "btn btn-outline-primary float-right") %>
+        <%= link("New Layout", to: layouts_path(@conn, :new), class: "btn btn-success float-right") %>
      </div>
 </div>
 <hr />
 
-<table class="table">
+<table class="table table-dark table-condensed">
     <thead>
         <th>Name</th>
         <th>Actions</th>
@@ -18,8 +18,8 @@
             <tr>
                 <td><%= layout.name %></td>
                 <td>
-                    <%= link("Edit", to: layouts_path(@conn, :edit, layout.id), class: "btn btn-sm btn-outline-warning") %>
-                    <%= link("Delete", to: layouts_path(@conn, :delete, layout.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-outline-danger") %>
+                    <%= link("Edit", to: layouts_path(@conn, :edit, layout.id), class: "btn btn-sm btn-warning") %>
+                    <%= link("Delete", to: layouts_path(@conn, :delete, layout.id), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-sm btn-danger") %>
                 </td>
             </tr>
         <% end %>
