@@ -5,8 +5,9 @@ defmodule ExCmsWeb.PageController do
 
   def index(conn, %{"page" => page}) do
     host = if(String.contains?(conn.host, "www")) do
-      [h | t] = String.split(conn.host)
-      Enum.join(t, ".")
+      [h | t] = String.split(conn.host, "www.")
+      [host] = t
+      host
     else
       conn.host
     end
@@ -25,11 +26,15 @@ defmodule ExCmsWeb.PageController do
   # This will always be the root path only i.e "/"
   def index(conn, _params) do
     host = if(String.contains?(conn.host, "www")) do
-      [h | t] = String.split(conn.host)
-      Enum.join(t, ".")
+      [h | t] = String.split(conn.host, "www.")
+      [host] = t
+      host
     else
       conn.host
     end
+    IO.inspect("----------")
+    IO.inspect(host)
+    IO.inspect("----------")
     case ExCms.Utils.PageCache.get_site_from_cache(host) do
       {:error, %{}} -> render(conn, "no_site.html")
       {:ok, site} ->
