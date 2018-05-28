@@ -20,7 +20,14 @@ defmodule ExCms.Mixfile do
   def application do
     [
       mod: {ExCms.Application, []},
-      extra_applications: [:logger, :runtime_tools, :liquid, :con_cache, :scrivener_ecto, :scrivener_html]
+      extra_applications: [
+        :logger,
+        :runtime_tools,
+        :liquid,
+        :con_cache,
+        :scrivener_ecto,
+        :scrivener_html
+      ]
     ]
   end
 
@@ -53,7 +60,7 @@ defmodule ExCms.Mixfile do
       {:ex_aws, "~> 1.0"},
       {:poison, "~> 2.0"},
       {:hackney, "~> 1.6"},
-      {:uuid, "~> 1.1" },
+      {:uuid, "~> 1.1"},
       {:edeliver, "~> 1.4.2"},
       {:distillery, "~> 1.4"}
     ]

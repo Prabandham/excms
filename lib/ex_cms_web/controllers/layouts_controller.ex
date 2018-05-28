@@ -42,6 +42,7 @@ defmodule ExCmsWeb.LayoutsController do
     case ExCms.Sites.update_layout(layout, layout_params) do
       {:ok, layout} ->
         ExCms.Utils.PageCache.expire_cache(layout.site_id)
+
         conn
         |> put_flash(:info, "Layout updated Successfully")
         |> redirect(to: layouts_path(conn, :index))
@@ -61,6 +62,7 @@ defmodule ExCmsWeb.LayoutsController do
     case ExCms.Repo.delete(layout) do
       {:ok, struct} ->
         ExCms.Utils.PageCache.expire_cache(layout.site_id)
+
         conn
         |> put_flash(:info, "Layout successfully deleted !")
         |> redirect(to: layouts_path(conn, :index))

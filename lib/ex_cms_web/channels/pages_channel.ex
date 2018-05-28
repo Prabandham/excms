@@ -1,5 +1,6 @@
 defmodule ExCmsWeb.PagesChannel do
   use Phoenix.Channel
+  @moduledoc false
 
   def join("pages:preview", message, socket) do
     {:ok, socket}

@@ -1,6 +1,7 @@
 defmodule ExCms.Sites.Page do
   use Ecto.Schema
   import Ecto.Changeset
+  @moduledoc false
 
   alias ExCms.Sites.{Site, Layout}
 
@@ -31,5 +32,6 @@ defmodule ExCms.Sites.Page do
   defp maybe_downcase_name(%Ecto.Changeset{valid?: true, changes: %{name: name}} = changeset) do
     change(changeset, %{name: String.downcase(name)})
   end
+
   defp maybe_downcase_name(changeset), do: changeset
 end

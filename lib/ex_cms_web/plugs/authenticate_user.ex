@@ -1,6 +1,7 @@
 defmodule ExCmsWeb.Plugs.AuthenticateUser do
   import Plug.Conn
   import Phoenix.Controller
+  @moduledoc false
 
   alias ExCmsWeb.Router.Helpers
 

@@ -55,6 +55,7 @@ defmodule ExCmsWeb.PagesController do
     case ExCms.Sites.update_page(page, pages_params) do
       {:ok, page} ->
         ExCms.Utils.PageCache.expire_cache(page.site_id)
+
         conn
         |> put_flash(:info, "Page updated Successfully")
         |> redirect(to: pages_path(conn, :index))

@@ -1,6 +1,7 @@
 defmodule ExCms.Sites.Site do
   use Ecto.Schema
   import Ecto.Changeset
+  @moduledoc false
 
   alias ExCms.Sites.{Page, Asset, Layout}
 

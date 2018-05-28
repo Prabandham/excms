@@ -33,8 +33,6 @@ $(document).ready(function() {
         onDrag: function(e, el, newWidth, newHeight, opt) {
             var bodyWidth = $("body").width();
             var mixWidth = bodyWidth - 680;
-            console.log(mixWidth);
-            console.log(newWidth);
             if(newWidth >= mixWidth) {
                 return false;
             }
