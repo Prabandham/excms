@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="form-group" style="height: 532px; margin-bottom: 5%">
+        <div class="form-group">
             <label>Content</label>
             <span><button id="toggle-page-inputs" class='btn btn-sm btn-outline-primary float-right'>Toggle Page Inputs</button></span>
             <div id="page_editor" style="width:100%;height:700px;", ></div>
@@ -52,7 +52,7 @@
 </div>
 
 <div class="col-xs-6 panel-left">
-    <iframe id="previewframe" srcdoc="<%= format_page_content(@page) %>"></iframe>
+    <iframe id="previewframe" srcdoc="<%= format_page_content(@page)  %>" allowTransparency="true" background="transparent"></iframe>
 </div>
 <div class="splitter">
 </div>

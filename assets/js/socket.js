@@ -57,7 +57,7 @@ socket.connect()
 window.page_channel = socket.channel("pages:preview", {})
 
 page_channel.on("preview_data", payload => {
-    $("#preview-div").attr("srcdoc", payload.data)
+    $("#previewframe").attr("srcdoc", payload.data)
 })
 
 page_channel.join()

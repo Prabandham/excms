@@ -63,6 +63,11 @@ $(document).ready(function() {
 
     if($("#page_editor").length) {
 
+        var bodyHeight = $('body').height()
+        var css = "height: " + bodyHeight + "px !important;"
+        $(".ace_editor").css(css);
+
+
         var page_editor_content = $("#page_content").val();
         var page_editor = ace.edit("page_editor");
 
@@ -70,7 +75,7 @@ $(document).ready(function() {
         page_editor.clearSelection(); // This will remove the highlight over the text
 
         page_editor.setOptions({
-            maxLines: 25,
+            maxLines: 35,
             autoScrollEditorIntoView: true,
             theme: "ace/theme/monokai",
             showPrintMargin: false,
