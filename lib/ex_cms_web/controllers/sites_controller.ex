@@ -48,6 +48,7 @@ defmodule ExCmsWeb.SitesController do
     case Sites.update_site(site, sites_params) do
       {:ok, site} ->
         PageCache.expire_cache(site.id)
+
         conn
         |> put_flash(:info, "Site upadted successfully")
         |> redirect(to: sites_path(conn, :index))

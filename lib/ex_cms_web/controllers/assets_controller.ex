@@ -33,6 +33,7 @@ defmodule ExCmsWeb.AssetsController do
               upload.path,
               "./cms_assets/#{assets_params["name"]}-#{assets_params["site_id"]}#{extension}"
             )
+
             ExCms.Utils.PageCache.expire_cache(asset.site_id)
             redirect(conn, to: assets_path(conn, :index))
           end
