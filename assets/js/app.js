@@ -95,8 +95,9 @@ $(document).ready(function() {
 
         $("#full-screen-edit").on('click', function() {
             $("#iframe-container").toggleClass('d-none');
+            $('#splitter').toggleClass('d-none');
             if($("#page_editor").width() > 600) {
-                $("#page_editor").width(60);
+                $("#page_editor").width(600);
             } else {
                 $("#page_editor").width($('body').width() - 30);
             }

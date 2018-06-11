@@ -71,7 +71,7 @@
 <div class="col-xs-6 panel-left" id="iframe-container" style="width: 50%;">
     <iframe id="previewframe" style="display:none" onload="this.style.display = 'block';" srcdoc="<%= format_page_content(@page)  %>" allowTransparency="true" background="transparent"></iframe>
 </div>
-<div class="splitter">
+<div class="splitter" id='splitter'>
 </div>
 <div class="right-div"></div>
 
