@@ -26,7 +26,8 @@ defmodule ExCms.Mixfile do
         :liquid,
         :con_cache,
         :scrivener_ecto,
-        :scrivener_html
+        :scrivener_html,
+        :que,
       ]
     ]
   end
@@ -57,6 +58,7 @@ defmodule ExCms.Mixfile do
       {:scrivener_html, "~> 1.7"},
       {:scrivener_list, "~> 1.0"},
       {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false},
+      {:que, git: "https://github.com/AlloyCI/que"},
       {:ex_aws, "~> 1.0"},
       {:poison, "~> 2.0"},
       {:hackney, "~> 1.6"},

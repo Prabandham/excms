@@ -82,6 +82,8 @@ $(document).ready(function() {
             mode: "ace/mode/html_elixir"
         });
 
+        page_editor.container.webkitRequestFullscreen()
+
         page_editor.getSession().on('change', function() {
             var val = page_editor.getSession().getValue();
             var site_id = $("#page_site_id").val();
@@ -89,6 +91,15 @@ $(document).ready(function() {
             var title = $("#page_title").val();
             page_channel.push("show_preview", {data: val, site_id: site_id, layout_id: layout_id, title: title})
             $("#page_content").val(val);
+        });
+
+        $("#full-screen-edit").on('click', function() {
+            $("#iframe-container").toggleClass('d-none');
+            if($("#page_editor").width() > 600) {
+                $("#page_editor").width(60);
+            } else {
+                $("#page_editor").width($('body').width() - 30);
+            }
         });
     }
 

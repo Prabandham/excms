@@ -36,6 +36,9 @@ config :scrivener_html,
   routes_helper: ExCmsWeb.Router.Helpers,
   view_style: :bootstrap_v4
 
+# This config will allow our jobs to be persisted when server restarts
+config :mnesia, dir: 'mnesia/#{Application.get_env(:ex_cms, :environment)}/#{node()}'
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

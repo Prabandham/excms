@@ -32,9 +32,9 @@ defmodule ExCms.Utils.BuildPage do
 
         if kind == "css" do
           if Application.get_env(:ex_cms, :environment) == "dev" do
-            "<link rel='stylesheet' href='#{asset.content}'>"
+            "<link rel='stylesheet' href=#{asset.content}>"
           else
-            "<link rel='stylesheet' href='#{asset.content}'>"
+            "<link rel='stylesheet' href=#{asset.content}>"
           end
         end
       end)
@@ -54,9 +54,9 @@ defmodule ExCms.Utils.BuildPage do
 
         if kind == "js" do
           if Application.get_env(:ex_cms, :environment) == "dev" do
-            "<script src='#{asset.content}'></script>'"
+            "<script src=#{asset.content}></script>"
           else
-            "<script src='#{asset.content}'></script>'"
+            "<script src=#{asset.content}></script>"
           end
         end
       end)
