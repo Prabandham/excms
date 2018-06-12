@@ -1,4 +1,4 @@
-# ExCms
+# ExCms  [![Build Status](https://travis-ci.org/Prabandham/excms.svg?branch=master)](https://travis-ci.org/Prabandham/excms)
     A tailored CMS that supports multiple sites. Generally specific to the usage of Larks.
 
 ### Prerequisites

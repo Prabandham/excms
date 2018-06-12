@@ -253,55 +253,33 @@ defmodule ExCms.SitesTest do
   describe "contract_messages" do
     alias ExCms.Sites.Contact
 
-    @valid_attrs %{values: %{}}
-    @update_attrs %{values: %{}}
-    @invalid_attrs %{values: nil}
-
-    def contact_fixture(attrs \\ %{}) do
-      {:ok, contact} =
-        attrs
-        |> Enum.into(@valid_attrs)
-        |> Sites.create_contact()
-
-      contact
+    def contact_fixture() do
+      Factories.fabricate_contact()
     end
 
     test "list_contract_messages/0 returns all contract_messages" do
       contact = contact_fixture()
-      assert Sites.list_contract_messages() == [contact]
+      [message] = Sites.list_contact_messages()
+      assert message.site_id == contact.site_id
     end
 
     test "get_contact!/1 returns the contact with given id" do
       contact = contact_fixture()
-      assert Sites.get_contact!(contact.id) == contact
+      assert Sites.get_contact!(contact.id).site_id == contact.site_id
     end
 
     test "create_contact/1 with valid data creates a contact" do
-      assert {:ok, %Contact{} = contact} = Sites.create_contact(@valid_attrs)
-      assert contact.values == %{}
+      first_contact = contact_fixture()
+      values = Factories.valid_contact_attrs()
+      values = values
+      |> Enum.into(%{site_id: first_contact.site_id})
+      assert {:ok, %Contact{} = contact} = Sites.create_contact(values)
+      assert contact.values == %{email: "sriprabandham@gmail.com", message: "Test message", name: "Srinidhi"}
+      assert contact.site_id == first_contact.site_id
     end
 
     test "create_contact/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Sites.create_contact(@invalid_attrs)
-    end
-
-    test "update_contact/2 with valid data updates the contact" do
-      contact = contact_fixture()
-      assert {:ok, contact} = Sites.update_contact(contact, @update_attrs)
-      assert %Contact{} = contact
-      assert contact.values == %{}
-    end
-
-    test "update_contact/2 with invalid data returns error changeset" do
-      contact = contact_fixture()
-      assert {:error, %Ecto.Changeset{}} = Sites.update_contact(contact, @invalid_attrs)
-      assert contact == Sites.get_contact!(contact.id)
-    end
-
-    test "delete_contact/1 deletes the contact" do
-      contact = contact_fixture()
-      assert {:ok, %Contact{}} = Sites.delete_contact(contact)
-      assert_raise Ecto.NoResultsError, fn -> Sites.get_contact!(contact.id) end
+      assert {:error, %Ecto.Changeset{}} = Sites.create_contact(%{})
     end
 
     test "change_contact/1 returns a contact changeset" do

@@ -1,5 +1,30 @@
 <div class="col-xs-6" id="editor-div">
     <%= form_for @changeset, @action, fn f -> %>
+        <div class="form-group">
+            <span class="justify-content-center">
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <i class="fa fa-desktop fa-2x"></i>
+                &nbsp;
+                &nbsp;
+                <i class="fa fa-tablet fa-2x"></i>
+                &nbsp;
+                &nbsp;
+                <i class="fa fa-mobile fa-2x"></i>
+                &nbsp;
+                &nbsp;
+                <i class="fa fa-arrows-alt fa-1x" id="full-screen-edit"></i>
+                <button id="toggle-page-inputs" class='btn btn-sm btn-outline-primary float-right'> Toggle Page Inputs</button>
+            </span>
+            <div id="page_editor" style="width:100%;height:700px;", ></div>
+            <%= textarea f, :content, class: 'd-none' %>
+            <%= error_tag(f, :content) %>
+        </div>
+
         <div id="common-page-inputs">
             <div class="form-group">
                 <label>Name</label>
@@ -38,23 +63,15 @@
         </div>
 
         <div class="form-group">
-            <label>Content</label>
-            <span><button id="toggle-page-inputs" class='btn btn-sm btn-outline-primary float-right'>Toggle Page Inputs</button></span>
-            <div id="page_editor" style="width:100%;height:700px;", ></div>
-            <%= textarea f, :content, class: 'd-none' %>
-            <%= error_tag(f, :content) %>
-        </div>
-
-        <div class="form-group">
           <%= submit "Submit", class: "btn btn-primary" %>
         </div>
     <% end %>
 </div>
 
-<div class="col-xs-6 panel-left" id="iframe-container">
+<div class="col-xs-6 panel-left" id="iframe-container" style="width: 50%;">
     <iframe id="previewframe" style="display:none" onload="this.style.display = 'block';" srcdoc="<%= format_page_content(@page)  %>" allowTransparency="true" background="transparent"></iframe>
 </div>
-<div class="splitter">
+<div class="splitter" id='splitter'>
 </div>
 <div class="right-div"></div>
 

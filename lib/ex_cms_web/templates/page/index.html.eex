@@ -1,1 +1,41 @@
+<meta name="csrf" content="<%= Plug.CSRFProtection.get_csrf_token() %>">
+
 <%= raw(@content) %>
+
+<script type='text/javascript'>
+    var csrf = document.querySelector("meta[name=csrf]").content;
+
+    $("form").on("submit", function( event ) {
+        var form = $( this ), // this will resolve to the form submitted
+            action = form.attr( 'action' ),
+            type = form.attr( 'method' ),
+            data = {};
+
+        // Make sure you use the 'name' field on the inputs you want to grab.
+        form.find( '[name]' ).each( function( i , v ){
+            var input = $( this ), // resolves to current input element.
+                name = input.attr( 'name' ),
+                value = input.val();
+            data[name] = value;
+           });
+
+         var post_data = { site_id: data["site_id"], values: data }
+
+         // Submit the form
+         $.ajax({
+             url: "/new_message",
+             type: "post",
+             data: { contacts: post_data },
+             headers: {
+                 "X-CSRF-TOKEN": csrf
+             },
+             dataType: "json",
+             success: function (data) {
+               form.prepend("<b class='text-success'>" + data + "</b>");
+             }
+         });
+
+        this.reset();
+        event.preventDefault();
+    });
+</script>

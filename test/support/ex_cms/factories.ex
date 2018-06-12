@@ -53,6 +53,15 @@ defmodule ExCms.Factories do
       title: "some updated title"
     }
 
+  def valid_contact_attrs(),
+    do: %{
+      values: %{
+        "name": "Srinidhi",
+        "email": "sriprabandham@gmail.com",
+        "message": "Test message"
+      }
+    }
+
   def invalid_page_attrs(),
     do: %{content: nil, description: nil, is_active: nil, name: nil, title: nil}
 
@@ -109,5 +118,17 @@ defmodule ExCms.Factories do
       |> Sites.create_asset()
 
     asset
+  end
+
+  def fabricate_contact(attrs \\ %{}) do
+    site = fabricate_site()
+
+    {:ok, contact} =
+    attrs
+    |> Enum.into(%{site_id: site.id})
+    |> Enum.into(%{values: valid_contact_attrs()})
+    |> Sites.create_contact()
+
+    contact
   end
 end
