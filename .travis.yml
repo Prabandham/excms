@@ -1,5 +1,7 @@
 services:
   - postgresql
+addons:
+  postgresql: "9.4"
 before_script:
   - psql -c 'create database ex_cms_test;' -U postgres
   - nohup phantomjs --wd &
