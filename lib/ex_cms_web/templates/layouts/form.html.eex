@@ -1,6 +1,14 @@
 <div class="row">
     <div class="col" id="layout_div">
         <%= form_for @changeset, @action, fn f -> %>
+            <div class="form-group">
+                <label>Content</label>
+                <span><button id="toggle-layout-inputs" class='btn btn-sm btn-outline-primary float-right'>Toggle Inputs</button></span>
+                <div id="editor" style="width:100%;height:400px;", ></div>
+                <%= textarea f, :content, class: 'd-none' %>
+                <%= error_tag(f, :content) %>
+            </div>
+
             <div id="common-layout-inputs">
                 <div class="form-group">
                     <label>Name</label>
@@ -15,13 +23,6 @@
                 </div>
             </div>
 
-            <div class="form-group" style="height: 432px; margin-bottom: 10%">
-                <label>Content</label>
-                <span><button id="toggle-layout-inputs" class='btn btn-sm btn-outline-primary float-right'>Toggle Inputs</button></span>
-                <div id="editor" style="width:100%;height:400px;", ></div>
-                <%= textarea f, :content, class: 'd-none' %>
-                <%= error_tag(f, :content) %>
-            </div>
 
             <div class="form-group">
               <%= submit "Submit", class: "btn btn-primary" %>
