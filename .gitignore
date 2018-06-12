@@ -11,6 +11,8 @@ erl_crash.dump
 npm-debug.log
 .idea/*
 
+mnesia/*
+
 # Static artifacts
 /assets/node_modules
 /cms_assets
