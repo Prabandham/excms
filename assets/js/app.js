@@ -159,20 +159,4 @@ $(document).ready(function() {
         console.error('Action:', e.action);
         console.error('Trigger:', e.trigger);
     });
-
-    // Resize iframe
-    $(function () {
-        setIFrameSize();
-        $(window).resize(function () {
-            setIFrameSize();
-        });
-    });
-
-    function setIFrameSize() {
-        var parentDivWidth = $("#previewframe").parent().width();
-        var parentDivHeight = $("#previewframe").parent().height();
-        $("#previewframe")[0].setAttribute("width", parentDivWidth);
-        $("#previewframe")[0].setAttribute("height", parentDivHeight);
-    }
-
 })
