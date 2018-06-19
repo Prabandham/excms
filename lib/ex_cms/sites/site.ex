@@ -3,7 +3,7 @@ defmodule ExCms.Sites.Site do
   import Ecto.Changeset
   @moduledoc false
 
-  alias ExCms.Sites.{Page, Asset, Layout}
+  alias ExCms.Sites.{Page, Asset, Layout, Contact}
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
@@ -19,6 +19,7 @@ defmodule ExCms.Sites.Site do
     has_many(:layouts, Layout)
     has_many(:assets, Asset)
     has_many(:pages, Page)
+    has_many(:contacts, Contact)
 
     timestamps()
   end

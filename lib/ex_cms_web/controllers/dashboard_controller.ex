@@ -2,6 +2,8 @@ defmodule ExCmsWeb.DashboardController do
   use ExCmsWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    host = conn.host
+    message_count = ExCms.Sites.count_contact_messages(host)
+    render(conn, "index.html", message_count: message_count)
   end
 end

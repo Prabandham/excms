@@ -3,12 +3,14 @@ defmodule ExCms.Sites.Contact do
   import Ecto.Changeset
   @moduledoc false
 
+  alias ExCms.Sites.Site
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "contact_messages" do
     field(:values, :map)
-    field(:site_id, :binary_id)
 
+    belongs_to(:site, Site)
     timestamps()
   end
 

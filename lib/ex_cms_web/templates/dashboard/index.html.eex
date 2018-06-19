@@ -1,1 +1,7 @@
-<h4 class='text-center'>Nothing to see here yet</h4>
+<div class="card text-dark" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Total Contacts</h5>
+    <p class="card-text">You have a total of <b><%= @message_count %></b> messages.</p>
+    <a href="/cms/contacts" class="card-link">View all</a>
+  </div>
+</div>

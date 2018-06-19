@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col col-xs-6"
+        <h4>Listing Contact Message</h4>
+     </div>
+</div>
+<hr />
+
+<div class="card-columns">
+    <%= for contact <- @contacts do %>
+        <div class="card text-dark">
+            <div class="card-header">
+                <i class="fa fa-envelope"></i>
+                <span class="float-right"> - (<%= contact.inserted_at %>)</span>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <%= for {k,v} <- contact.values do %>
+                        <tr>
+                            <th><%= String.capitalize(k) %></th>
+                            <td><%= v %></td>
+                        </tr>
+                    <% end %>
+                </table>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<div class="row h-100 justify-content-center align-items-center">
+    <%= pagination_links @contacts %>
+</div>

@@ -479,6 +479,31 @@ defmodule ExCms.Sites do
   end
 
   @doc """
+  List contact messages for a given site
+"""
+  def list_contact_messages(site_name) do
+    site = get_site_by_domain(site_name)
+    case site do
+      nil -> []
+      _ ->
+        Contact
+        |> where(site_id: ^site.id)
+        |> order_by(desc: :inserted_at)
+    end
+  end
+
+  def count_contact_messages(site_name) do
+    site = get_site_by_domain(site_name)
+    case site do
+      nil -> 0
+      _ ->
+        Contact
+        |> where(site_id: ^site.id)
+        |> Repo.aggregate(:count, :id)
+    end
+  end
+
+  @doc """
   Gets a single contact.
 
   Raises `Ecto.NoResultsError` if the Contact does not exist.

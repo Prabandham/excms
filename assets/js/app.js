@@ -52,7 +52,8 @@ $(document).ready(function() {
             autoScrollEditorIntoView: true,
             theme: "ace/theme/monokai",
             showPrintMargin: false,
-            mode: "ace/mode/html_elixir"
+            mode: "ace/mode/html_elixir",
+            enableBasicAutocompletion: true
         });
 
         editor.getSession().on('change', function() {
@@ -79,7 +80,8 @@ $(document).ready(function() {
             autoScrollEditorIntoView: true,
             theme: "ace/theme/monokai",
             showPrintMargin: false,
-            mode: "ace/mode/html_elixir"
+            mode: "ace/mode/html_elixir",
+            enableBasicAutocompletion: true
         });
 
         page_editor.container.webkitRequestFullscreen()

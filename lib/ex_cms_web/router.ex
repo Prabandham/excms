@@ -22,6 +22,7 @@ defmodule ExCmsWeb.Router do
 
     get("/", DashboardController, :index)
 
+    get("/contacts", ContactsController, :index)
     resources("/sites", SitesController)
     resources("/assets", AssetsController)
     resources("/layouts", LayoutsController)
